@@ -2,5 +2,4 @@ node_modules/
 .meteor
 .DS_Store
 .git
-typings/browser
-typings/main
+typings/

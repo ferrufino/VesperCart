@@ -1,0 +1,493 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'ng2-material',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.22
+3 info using node@v0.10.43
+4 verbose install initial load of /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/package.json
+5 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/angular2/package.json
+6 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/angular2-meteor/package.json
+7 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/es6-promise/package.json
+8 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/es6-shim/package.json
+9 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/meteor-node-stubs/package.json
+10 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material/package.json
+11 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/reflect-metadata/package.json
+12 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/rxjs/package.json
+13 verbose installManyTop reading scoped package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/zone.js/package.json
+14 verbose readDependencies loading dependencies from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/package.json
+15 verbose install ng2-material is installed as 0.3.5
+16 silly cache add args [ 'ng2-material', null ]
+17 verbose cache add spec ng2-material
+18 silly cache add parsed spec { raw: 'ng2-material',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'ng2-material',
+18 silly cache add   rawSpec: '',
+18 silly cache add   spec: 'latest',
+18 silly cache add   type: 'tag' }
+19 silly addNamed ng2-material@latest
+20 verbose addNamed "latest" is being treated as a dist-tag for ng2-material
+21 info addNameTag [ 'ng2-material', 'latest' ]
+22 silly mapToRegistry name ng2-material
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/ng2-material
+26 verbose addNameTag registry:https://registry.npmjs.org/ng2-material not in flight; fetching
+27 verbose request uri https://registry.npmjs.org/ng2-material
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 16:00:48
+30 verbose request id a7b20868e047d2f7
+31 verbose etag "291RK6UME33RKUBMBKXTQ6LLG"
+32 http request GET https://registry.npmjs.org/ng2-material
+33 http 200 https://registry.npmjs.org/ng2-material
+34 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+34 verbose headers   etag: '"CBGMZQH6VLC1Q57MF7U3NU9G1"',
+34 verbose headers   'content-type': 'application/json',
+34 verbose headers   'content-encoding': 'gzip',
+34 verbose headers   'cache-control': 'max-age=300',
+34 verbose headers   'content-length': '9790',
+34 verbose headers   'accept-ranges': 'bytes',
+34 verbose headers   date: 'Wed, 13 Apr 2016 21:00:46 GMT',
+34 verbose headers   via: '1.1 varnish',
+34 verbose headers   age: '0',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   'x-served-by': 'cache-dfw1826-DFW',
+34 verbose headers   'x-cache': 'MISS',
+34 verbose headers   'x-cache-hits': '0',
+34 verbose headers   'x-timer': 'S1460581246.700927,VS0,VE59',
+34 verbose headers   vary: 'Accept-Encoding' }
+35 silly get cb [ 200,
+35 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+35 silly get     etag: '"CBGMZQH6VLC1Q57MF7U3NU9G1"',
+35 silly get     'content-type': 'application/json',
+35 silly get     'content-encoding': 'gzip',
+35 silly get     'cache-control': 'max-age=300',
+35 silly get     'content-length': '9790',
+35 silly get     'accept-ranges': 'bytes',
+35 silly get     date: 'Wed, 13 Apr 2016 21:00:46 GMT',
+35 silly get     via: '1.1 varnish',
+35 silly get     age: '0',
+35 silly get     connection: 'keep-alive',
+35 silly get     'x-served-by': 'cache-dfw1826-DFW',
+35 silly get     'x-cache': 'MISS',
+35 silly get     'x-cache-hits': '0',
+35 silly get     'x-timer': 'S1460581246.700927,VS0,VE59',
+35 silly get     vary: 'Accept-Encoding' } ]
+36 verbose get saving ng2-material to /Users/Ferrufino/.npm/registry.npmjs.org/ng2-material/.cache.json
+37 verbose correctMkdir /Users/Ferrufino/.npm correctMkdir not in flight; initializing
+38 silly addNameTag next cb for ng2-material with tag latest
+39 silly addNamed ng2-material@0.3.5
+40 verbose addNamed "0.3.5" is a plain semver version for ng2-material
+41 silly cache afterAdd ng2-material@0.3.5
+42 verbose afterAdd /Users/Ferrufino/.npm/ng2-material/0.3.5/package/package.json not in flight; writing
+43 verbose correctMkdir /Users/Ferrufino/.npm correctMkdir not in flight; initializing
+44 verbose afterAdd /Users/Ferrufino/.npm/ng2-material/0.3.5/package/package.json written
+45 silly install resolved [ { name: 'ng2-material',
+45 silly install resolved     version: '0.3.5',
+45 silly install resolved     description: 'ng2-material [![Build Status](https://travis-ci.org/justindujardin/ng2-material.svg?branch=master)](https://travis-ci.org/justindujardin/ng2-material) [![Coverage Status](https://coveralls.io/repos/justindujardin/ng2-material/badge.svg?branch=master&servi',
+45 silly install resolved     main: 'dist/ng2-material.js',
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'git+ssh://git@github.com/justindujardin/ng2-material.git' },
+45 silly install resolved     author:
+45 silly install resolved      { name: 'Justin DuJardin',
+45 silly install resolved        email: 'justin@dujardinconsulting.com' },
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     scripts:
+45 silly install resolved      { start: '$(npm bin)/grunt serve',
+45 silly install resolved        test: '$(npm bin)/grunt karma' },
+45 silly install resolved     typings: 'dist/ng2-material.d.ts',
+45 silly install resolved     devDependencies:
+45 silly install resolved      { 'angular2-universal-polyfills': '^0.3.4',
+45 silly install resolved        'angular2-universal': '0.90.2',
+45 silly install resolved        autoprefixer: '6.2.0',
+45 silly install resolved        coveralls: '2.11.6',
+45 silly install resolved        css: '^2.2.1',
+45 silly install resolved        'css-loader': '0.23.1',
+45 silly install resolved        'dts-generator': '1.6.3',
+45 silly install resolved        'es6-module-loader': '0.17.4',
+45 silly install resolved        'file-loader': '0.8.5',
+45 silly install resolved        glob: '6.0.1',
+45 silly install resolved        grunt: '0.4.5',
+45 silly install resolved        'grunt-bump': '0.7.0',
+45 silly install resolved        'grunt-cli': '0.1.13',
+45 silly install resolved        'grunt-contrib-clean': '0.7.0',
+45 silly install resolved        'grunt-contrib-connect': '0.11.2',
+45 silly install resolved        'grunt-contrib-copy': '0.8.2',
+45 silly install resolved        'grunt-contrib-sass': '0.9.2',
+45 silly install resolved        'grunt-contrib-watch': '0.6.1',
+45 silly install resolved        'grunt-conventional-changelog': '5.0.0',
+45 silly install resolved        'grunt-karma': '0.12.1',
+45 silly install resolved        'grunt-notify': '0.4.3',
+45 silly install resolved        'grunt-npm': '0.0.2',
+45 silly install resolved        'grunt-postcss': '0.7.1',
+45 silly install resolved        'grunt-ts': '5.2.0',
+45 silly install resolved        'grunt-webpack': '1.0.11',
+45 silly install resolved        highlightjs: '8.7.0',
+45 silly install resolved        istanbul: '1.0.0-alpha.2',
+45 silly install resolved        karma: '0.13.19',
+45 silly install resolved        'karma-chrome-launcher': '0.2.2',
+45 silly install resolved        'karma-coverage': '0.5.3',
+45 silly install resolved        'karma-firefox-launcher': '0.1.7',
+45 silly install resolved        'karma-jasmine': '0.2.2',
+45 silly install resolved        'karma-mocha-reporter': '1.1.5',
+45 silly install resolved        'karma-sauce-launcher': '0.3.0',
+45 silly install resolved        'lcov-parse': '0.0.10',
+45 silly install resolved        marked: '0.3.5',
+45 silly install resolved        parse5: '^1.5.0',
+45 silly install resolved        preboot: '^2.0.5',
+45 silly install resolved        proxyquire: '^1.7.4',
+45 silly install resolved        'remap-istanbul': '0.4.0',
+45 silly install resolved        'style-loader': '0.13.0',
+45 silly install resolved        systemjs: '0.19.2',
+45 silly install resolved        'systemjs-builder': 'github:justindujardin/builder#typescript-source-maps',
+45 silly install resolved        typescript: '1.8.0',
+45 silly install resolved        underscore: '1.8.3',
+45 silly install resolved        'url-loader': '0.5.7',
+45 silly install resolved        webpack: '1.12.13',
+45 silly install resolved        'webpack-dev-server': '1.14.1' },
+45 silly install resolved     contributors:
+45 silly install resolved      [ [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object],
+45 silly install resolved        [Object] ],
+45 silly install resolved     peerDependencies:
+45 silly install resolved      { angular2: '>=2.0.0-beta.14',
+45 silly install resolved        'es6-promise': '>=3.0.2',
+45 silly install resolved        'es6-shim': '>=0.35.0',
+45 silly install resolved        'reflect-metadata': '0.1.2',
+45 silly install resolved        rxjs: '5.0.0-beta.2',
+45 silly install resolved        'zone.js': '>=0.6.6' },
+45 silly install resolved     bugs: { url: 'https://github.com/justindujardin/ng2-material/issues' },
+45 silly install resolved     homepage: 'https://github.com/justindujardin/ng2-material#readme',
+45 silly install resolved     _id: 'ng2-material@0.3.5',
+45 silly install resolved     _shasum: 'e8dcb19b3b3c3e6b5cf9bc768571174ad5eb3de9',
+45 silly install resolved     _from: 'ng2-material@latest',
+45 silly install resolved     _npmVersion: '2.15.0',
+45 silly install resolved     _nodeVersion: '0.10.44',
+45 silly install resolved     _npmUser:
+45 silly install resolved      { name: 'justindujardin',
+45 silly install resolved        email: 'justin@dujardinconsulting.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: 'e8dcb19b3b3c3e6b5cf9bc768571174ad5eb3de9',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/ng2-material/-/ng2-material-0.3.5.tgz' },
+45 silly install resolved     maintainers: [ [Object] ],
+45 silly install resolved     _npmOperationalInternal:
+45 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+45 silly install resolved        tmp: 'tmp/ng2-material-0.3.5.tgz_1460322647037_0.7975823627784848' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/ng2-material/-/ng2-material-0.3.5.tgz',
+45 silly install resolved     readme: 'ERROR: No README data found!' } ]
+46 info install ng2-material@0.3.5 into /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp
+47 info installOne ng2-material@0.3.5
+48 verbose installOne of ng2-material to /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp not in flight; installing
+49 verbose correctMkdir /Users/Ferrufino/.npm/_locks correctMkdir not in flight; initializing
+50 verbose lock using /Users/Ferrufino/.npm/_locks/ng2-material-a16110e00cac0f53.lock for /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+51 silly install write writing ng2-material 0.3.5 to /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+52 verbose unbuild node_modules/ng2-material
+53 info preuninstall ng2-material@0.3.5
+54 info uninstall ng2-material@0.3.5
+55 verbose unbuild rmStuff ng2-material@0.3.5 from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules
+56 info postuninstall ng2-material@0.3.5
+57 silly gentlyRm /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material is being purged from base /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp
+58 verbose gentlyRm don't care about contents; nuking /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+59 silly vacuum-fs purging /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+60 silly vacuum-fs quitting because other entries in /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules
+61 verbose tar unpack /Users/Ferrufino/.npm/ng2-material/0.3.5/package.tgz
+62 verbose tar unpacking to /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+63 silly gentlyRm /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material is being purged
+64 verbose gentlyRm don't care about contents; nuking /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+65 silly gunzTarPerm modes [ '755', '644' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm extractEntry README.md
+68 silly gunzTarPerm extractEntry all.js
+69 silly gunzTarPerm extractEntry all.webpack.js
+70 silly gunzTarPerm extractEntry all.webpack.styles.js
+71 silly gunzTarPerm extractEntry webpack_all.js
+72 silly gunzTarPerm extractEntry webpack_styles.js
+73 silly gunzTarPerm extractEntry core/key_codes.js
+74 silly gunzTarPerm extractEntry core/key_codes.d.ts
+75 silly gunzTarPerm extractEntry core/key_codes.js.map
+76 silly gunzTarPerm extractEntry core/util/media.js
+77 silly gunzTarPerm extractEntry core/util/ink.js
+78 silly gunzTarPerm extractEntry core/util/animate.js
+79 silly gunzTarPerm extractEntry core/util/util.js
+80 silly gunzTarPerm extractEntry core/util/viewport.js
+81 silly gunzTarPerm extractEntry core/util/ink.js.map
+82 silly gunzTarPerm extractEntry core/util/media.d.ts
+83 silly gunzTarPerm extractEntry core/util/animate.js.map
+84 silly gunzTarPerm extractEntry core/util/media.js.map
+85 silly gunzTarPerm extractEntry core/util/util.d.ts
+86 silly gunzTarPerm extractEntry core/util/ink.d.ts
+87 silly gunzTarPerm extractEntry core/util/util.js.map
+88 silly gunzTarPerm extractEntry core/util/viewport.d.ts
+89 silly gunzTarPerm extractEntry core/util/animate.d.ts
+90 silly gunzTarPerm extractEntry core/util/viewport.js.map
+91 silly gunzTarPerm extractEntry a37b0c01c0baf1888ca812cc0508f6e2.ttf
+92 silly gunzTarPerm extractEntry all.css
+93 silly gunzTarPerm extractEntry components/input/input.js
+94 silly gunzTarPerm extractEntry components/input/input.d.ts
+95 silly gunzTarPerm extractEntry components/input/input.js.map
+96 silly gunzTarPerm extractEntry components/backdrop/backdrop.js
+97 silly gunzTarPerm extractEntry components/backdrop/backdrop.d.ts
+98 silly gunzTarPerm extractEntry components/backdrop/backdrop.js.map
+99 silly gunzTarPerm extractEntry components/card/card.js
+100 silly gunzTarPerm extractEntry components/card/card.d.ts
+101 silly gunzTarPerm extractEntry components/card/card.js.map
+102 silly gunzTarPerm extractEntry components/checkbox/checkbox.js
+103 silly gunzTarPerm extractEntry components/checkbox/checkbox.d.ts
+104 silly gunzTarPerm extractEntry components/checkbox/checkbox.js.map
+105 silly gunzTarPerm extractEntry components/content/content.js
+106 silly gunzTarPerm extractEntry components/content/content.d.ts
+107 silly gunzTarPerm extractEntry components/content/content.js.map
+108 silly gunzTarPerm extractEntry components/data_table/data_table.js
+109 silly gunzTarPerm extractEntry components/data_table/data_table_selectable_tr.js
+110 silly gunzTarPerm extractEntry components/data_table/data_table.d.ts
+111 silly gunzTarPerm extractEntry components/data_table/data_table.js.map
+112 silly gunzTarPerm extractEntry components/data_table/data_table_selectable_tr.d.ts
+113 silly gunzTarPerm extractEntry components/data_table/data_table_selectable_tr.js.map
+114 silly gunzTarPerm extractEntry components/dialog/dialog_config.js
+115 silly gunzTarPerm extractEntry components/dialog/dialog_basic.js
+116 silly gunzTarPerm extractEntry components/dialog/dialog.js
+117 silly gunzTarPerm extractEntry components/dialog/dialog_container.js
+118 silly gunzTarPerm extractEntry components/dialog/dialog_ref.js
+119 silly gunzTarPerm extractEntry components/dialog/dialog_basic.js.map
+120 silly gunzTarPerm extractEntry components/dialog/dialog_config.d.ts
+121 silly gunzTarPerm extractEntry components/dialog/dialog.js.map
+122 silly gunzTarPerm extractEntry components/dialog/dialog_config.js.map
+123 silly gunzTarPerm extractEntry components/dialog/dialog_container.d.ts
+124 silly gunzTarPerm extractEntry components/dialog/dialog_basic.d.ts
+125 silly gunzTarPerm extractEntry components/dialog/dialog_container.js.map
+126 silly gunzTarPerm extractEntry components/dialog/dialog_ref.d.ts
+127 silly gunzTarPerm extractEntry components/dialog/dialog.d.ts
+128 silly gunzTarPerm extractEntry components/dialog/dialog_ref.js.map
+129 silly gunzTarPerm extractEntry components/divider/divider.js
+130 silly gunzTarPerm extractEntry components/divider/divider.d.ts
+131 silly gunzTarPerm extractEntry components/divider/divider.js.map
+132 silly gunzTarPerm extractEntry components/form/messages.js
+133 silly gunzTarPerm extractEntry components/form/validators.js
+134 silly gunzTarPerm extractEntry components/form/messages.d.ts
+135 silly gunzTarPerm extractEntry components/form/messages.js.map
+136 silly gunzTarPerm extractEntry components/form/validators.d.ts
+137 silly gunzTarPerm extractEntry components/form/validators.js.map
+138 silly gunzTarPerm extractEntry components/icon/icon.js
+139 silly gunzTarPerm extractEntry components/icon/icon.d.ts
+140 silly gunzTarPerm extractEntry components/icon/icon.js.map
+141 silly gunzTarPerm extractEntry components/ink/ink.js
+142 silly gunzTarPerm extractEntry components/ink/ink.d.ts
+143 silly gunzTarPerm extractEntry components/ink/ink.js.map
+144 silly gunzTarPerm extractEntry components/button/button.js
+145 silly gunzTarPerm extractEntry components/button/button.d.ts
+146 silly gunzTarPerm extractEntry components/button/button.js.map
+147 silly gunzTarPerm extractEntry components/list/list.js
+148 silly gunzTarPerm extractEntry components/list/list.d.ts
+149 silly gunzTarPerm extractEntry components/list/list.js.map
+150 silly gunzTarPerm extractEntry components/peekaboo/peekaboo.js
+151 silly gunzTarPerm extractEntry components/peekaboo/peekaboo.d.ts
+152 silly gunzTarPerm extractEntry components/peekaboo/peekaboo.js.map
+153 silly gunzTarPerm extractEntry components/progress_circular/progress_circular.js
+154 silly gunzTarPerm extractEntry components/progress_circular/progress_circular.d.ts
+155 silly gunzTarPerm extractEntry components/progress_circular/progress_circular.js.map
+156 silly gunzTarPerm extractEntry components/progress_linear/progress_linear.js
+157 silly gunzTarPerm extractEntry components/progress_linear/progress_linear.d.ts
+158 silly gunzTarPerm extractEntry components/progress_linear/progress_linear.js.map
+159 silly gunzTarPerm extractEntry components/radio/radio_button.js
+160 silly gunzTarPerm extractEntry components/radio/radio_dispatcher.js
+161 silly gunzTarPerm extractEntry components/radio/radio_button.d.ts
+162 silly gunzTarPerm extractEntry components/radio/radio_button.js.map
+163 silly gunzTarPerm extractEntry components/radio/radio_dispatcher.d.ts
+164 silly gunzTarPerm extractEntry components/radio/radio_dispatcher.js.map
+165 silly gunzTarPerm extractEntry components/sidenav/sidenav.js
+166 silly gunzTarPerm extractEntry components/sidenav/sidenav_service.js
+167 silly gunzTarPerm extractEntry components/sidenav/sidenav.d.ts
+168 silly gunzTarPerm extractEntry components/sidenav/sidenav.js.map
+169 silly gunzTarPerm extractEntry components/sidenav/sidenav_service.d.ts
+170 silly gunzTarPerm extractEntry components/sidenav/sidenav_service.js.map
+171 silly gunzTarPerm extractEntry components/subheader/subheader.js
+172 silly gunzTarPerm extractEntry components/subheader/subheader.d.ts
+173 silly gunzTarPerm extractEntry components/subheader/subheader.js.map
+174 silly gunzTarPerm extractEntry components/switcher/switch.js
+175 silly gunzTarPerm extractEntry components/switcher/switch.d.ts
+176 silly gunzTarPerm extractEntry components/switcher/switch.js.map
+177 silly gunzTarPerm extractEntry components/tabs/tabs.js
+178 silly gunzTarPerm extractEntry components/tabs/tabs.d.ts
+179 silly gunzTarPerm extractEntry components/tabs/tabs.js.map
+180 silly gunzTarPerm extractEntry components/toolbar/toolbar.js
+181 silly gunzTarPerm extractEntry components/toolbar/toolbar.d.ts
+182 silly gunzTarPerm extractEntry components/toolbar/toolbar.js.map
+183 silly gunzTarPerm extractEntry all.css.map
+184 silly gunzTarPerm extractEntry dist/README.md
+185 silly gunzTarPerm extractEntry dist/ng2-material.js
+186 silly gunzTarPerm extractEntry dist/ng2-material.min.js
+187 silly gunzTarPerm extractEntry dist/font.scss
+188 silly gunzTarPerm extractEntry dist/MaterialIcons-Regular.woff2
+189 silly gunzTarPerm extractEntry dist/MaterialIcons-Regular.eot
+190 silly gunzTarPerm extractEntry dist/font.css
+191 silly gunzTarPerm extractEntry dist/font.css.map
+192 silly gunzTarPerm extractEntry dist/MaterialIcons-Regular.ijmap
+193 silly gunzTarPerm extractEntry dist/ng2-material.css
+194 silly gunzTarPerm extractEntry dist/ng2-material.css.map
+195 silly gunzTarPerm extractEntry dist/ng2-material.d.ts
+196 silly gunzTarPerm extractEntry dist/MaterialIcons-Regular.ttf
+197 silly gunzTarPerm extractEntry dist/ng2-material.js.map
+198 silly gunzTarPerm extractEntry dist/MaterialIcons-Regular.woff
+199 silly gunzTarPerm extractEntry dist/ng2-material.min.js.map
+200 silly gunzTarPerm extractEntry e79bfd88537def476913f3ed52f4f4b3.eot
+201 silly gunzTarPerm extractEntry font/README.md
+202 silly gunzTarPerm extractEntry font/MaterialIcons-Regular.eot
+203 silly gunzTarPerm extractEntry font/MaterialIcons-Regular.ijmap
+204 silly gunzTarPerm extractEntry font/MaterialIcons-Regular.ttf
+205 silly gunzTarPerm extractEntry font/MaterialIcons-Regular.woff
+206 silly gunzTarPerm extractEntry font/MaterialIcons-Regular.woff2
+207 silly gunzTarPerm extractEntry font/font.css
+208 silly gunzTarPerm extractEntry font/font.css.map
+209 silly gunzTarPerm extractEntry font/font.scss
+210 silly gunzTarPerm extractEntry all.d.ts
+211 silly gunzTarPerm extractEntry source/all.scss
+212 silly gunzTarPerm extractEntry source/all.ts
+213 silly gunzTarPerm extractEntry source/components/input/input.scss
+214 silly gunzTarPerm extractEntry source/components/input/input.ts
+215 silly gunzTarPerm extractEntry source/components/backdrop/backdrop.scss
+216 silly gunzTarPerm extractEntry source/components/backdrop/backdrop.ts
+217 silly gunzTarPerm extractEntry source/components/card/card.scss
+218 silly gunzTarPerm extractEntry source/components/card/card.ts
+219 silly gunzTarPerm extractEntry source/components/checkbox/checkbox.scss
+220 silly gunzTarPerm extractEntry source/components/checkbox/checkbox.ts
+221 silly gunzTarPerm extractEntry source/components/content/content.scss
+222 silly gunzTarPerm extractEntry source/components/content/content.ts
+223 silly gunzTarPerm extractEntry source/components/data_table/data_table.scss
+224 silly gunzTarPerm extractEntry source/components/data_table/data_table.ts
+225 silly gunzTarPerm extractEntry source/components/data_table/data_table_selectable_tr.ts
+226 silly gunzTarPerm extractEntry source/components/dialog/dialog.scss
+227 silly gunzTarPerm extractEntry source/components/dialog/dialog.ts
+228 silly gunzTarPerm extractEntry source/components/dialog/dialog_basic.ts
+229 silly gunzTarPerm extractEntry source/components/dialog/dialog_config.ts
+230 silly gunzTarPerm extractEntry source/components/dialog/dialog_container.ts
+231 silly gunzTarPerm extractEntry source/components/dialog/dialog_ref.ts
+232 silly gunzTarPerm extractEntry source/components/divider/divider.scss
+233 silly gunzTarPerm extractEntry source/components/divider/divider.ts
+234 silly gunzTarPerm extractEntry source/components/form/messages.scss
+235 silly gunzTarPerm extractEntry source/components/form/messages.ts
+236 silly gunzTarPerm extractEntry source/components/form/validators.ts
+237 silly gunzTarPerm extractEntry source/components/icon/icon.scss
+238 silly gunzTarPerm extractEntry source/components/icon/icon.ts
+239 silly gunzTarPerm extractEntry source/components/ink/ink.ts
+240 silly gunzTarPerm extractEntry source/components/button/button.scss
+241 silly gunzTarPerm extractEntry source/components/button/button.ts
+242 silly gunzTarPerm extractEntry source/components/list/list.scss
+243 silly gunzTarPerm extractEntry source/components/list/list.ts
+244 silly gunzTarPerm extractEntry source/components/peekaboo/peekaboo.scss
+245 silly gunzTarPerm extractEntry source/components/peekaboo/peekaboo.ts
+246 silly gunzTarPerm extractEntry source/components/progress_circular/progress_circular.scss
+247 silly gunzTarPerm extractEntry source/components/progress_circular/progress_circular.ts
+248 silly gunzTarPerm extractEntry source/components/progress_linear/progress_linear.scss
+249 silly gunzTarPerm extractEntry source/components/progress_linear/progress_linear.ts
+250 silly gunzTarPerm extractEntry source/components/radio/radio_button.scss
+251 silly gunzTarPerm extractEntry source/components/radio/radio_button.ts
+252 silly gunzTarPerm extractEntry source/components/radio/radio_dispatcher.ts
+253 silly gunzTarPerm extractEntry source/components/radio/radio_group.scss
+254 silly gunzTarPerm extractEntry source/components/sidenav/sidenav.scss
+255 silly gunzTarPerm extractEntry source/components/sidenav/sidenav.ts
+256 silly gunzTarPerm extractEntry source/components/sidenav/sidenav_service.ts
+257 silly gunzTarPerm extractEntry source/components/subheader/subheader.scss
+258 silly gunzTarPerm extractEntry source/components/subheader/subheader.ts
+259 silly gunzTarPerm extractEntry source/components/switcher/switch.scss
+260 silly gunzTarPerm extractEntry source/components/switcher/switch.ts
+261 silly gunzTarPerm extractEntry source/components/tabs/tabs.scss
+262 silly gunzTarPerm extractEntry source/components/tabs/tabs.ts
+263 silly gunzTarPerm extractEntry source/components/toolbar/toolbar.scss
+264 silly gunzTarPerm extractEntry source/components/toolbar/toolbar.ts
+265 silly gunzTarPerm extractEntry source/components/whiteframe/whiteframe.scss
+266 silly gunzTarPerm extractEntry source/components.scss
+267 silly gunzTarPerm extractEntry source/core/key_codes.ts
+268 silly gunzTarPerm extractEntry source/core/style/default-theme.scss
+269 silly gunzTarPerm extractEntry source/core/style/layout.scss
+270 silly gunzTarPerm extractEntry source/core/style/mixins.scss
+271 silly gunzTarPerm extractEntry source/core/style/palette.scss
+272 silly gunzTarPerm extractEntry source/core/style/shadows.scss
+273 silly gunzTarPerm extractEntry source/core/style/structure.scss
+274 silly gunzTarPerm extractEntry source/core/style/theme-functions.scss
+275 silly gunzTarPerm extractEntry source/core/style/typography.scss
+276 silly gunzTarPerm extractEntry source/core/style/variables.scss
+277 silly gunzTarPerm extractEntry source/core/util/animate.ts
+278 silly gunzTarPerm extractEntry source/core/util/ink.ts
+279 silly gunzTarPerm extractEntry source/core/util/media.ts
+280 silly gunzTarPerm extractEntry source/core/util/util.ts
+281 silly gunzTarPerm extractEntry source/core/util/viewport.ts
+282 silly gunzTarPerm extractEntry source/core.scss
+283 silly gunzTarPerm extractEntry source/webpack_all.ts
+284 silly gunzTarPerm extractEntry source/webpack_styles.ts
+285 silly gunzTarPerm extractEntry webpack_all.d.ts
+286 silly gunzTarPerm extractEntry CHANGELOG.md
+287 silly gunzTarPerm extractEntry webpack_all.js.map
+288 silly gunzTarPerm extractEntry webpack_styles.d.ts
+289 silly gunzTarPerm extractEntry all.js.map
+290 silly gunzTarPerm extractEntry webpack_styles.js.map
+291 verbose write writing to /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material/package.json
+292 info preinstall ng2-material@0.3.5
+293 verbose readDependencies loading dependencies from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material/package.json
+294 silly prepareForInstallMany adding angular2@>=2.0.0-beta.14 from ng2-material peerDependencies
+295 warn peerDependencies The peer dependency angular2@>=2.0.0-beta.14 included from ng2-material will no
+296 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+297 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+298 verbose readDependencies loading dependencies from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material/package.json
+299 silly install resolved []
+300 verbose about to build /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+301 info build /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+302 info linkStuff ng2-material@0.3.5
+303 silly linkStuff ng2-material@0.3.5 has /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules as its parent node_modules
+304 verbose linkBins ng2-material@0.3.5
+305 verbose linkMans ng2-material@0.3.5
+306 verbose rebuildBundles ng2-material@0.3.5
+307 info install ng2-material@0.3.5
+308 info postinstall ng2-material@0.3.5
+309 verbose readDependencies loading dependencies from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/package.json
+310 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/angular2/package.json
+311 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/angular2-meteor/package.json
+312 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/es6-promise/package.json
+313 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/es6-shim/package.json
+314 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/meteor-node-stubs/package.json
+315 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material/package.json
+316 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/reflect-metadata/package.json
+317 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/rxjs/package.json
+318 verbose targetResolver reading package data from /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/zone.js/package.json
+319 verbose already installed skipping angular2@>=2.0.0-beta.14 /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp
+320 silly install resolved []
+321 verbose unlock done using /Users/Ferrufino/.npm/_locks/ng2-material-a16110e00cac0f53.lock for /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/node_modules/ng2-material
+322 verbose validateInstall loading /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp/package.json for validation
+323 verbose stack Error: The package angular2@2.0.0-beta.12 does not satisfy its siblings' peerDependencies requirements!
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/lib/install.js:125:32
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/lib/install.js:268:7
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+323 verbose stack     at cb (/Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+323 verbose stack     at cb (/Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+323 verbose stack     at cb (/Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+323 verbose stack     at /Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+324 verbose cwd /Users/Ferrufino/Documents/Code/vesperCart/VesperCartApp
+325 error Darwin 15.0.0
+326 error argv "node" "/Users/Ferrufino/.meteor/packages/meteor-tool/.1.3.1.nwdv3u++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/npm" "install" "ng2-material" "--save"
+327 error node v0.10.43
+328 error npm  v2.14.22
+329 error code EPEERINVALID
+330 error peerinvalid The package angular2@2.0.0-beta.12 does not satisfy its siblings' peerDependencies requirements!
+330 error peerinvalid Peer angular2-meteor@0.5.2 wants angular2@2.0.0-beta.12
+330 error peerinvalid Peer ng2-material@0.3.5 wants angular2@>=2.0.0-beta.14
+331 verbose exit [ 1, true ]

@@ -1,0 +1,53 @@
+<md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
+  <h2>
+    <a ui-sref="parties"><span class="md-title">Vesper Cart</span></a>
+  </h2>
+  <span flex></span>
+  <div class="navbar-right navbar-text">
+  </div>
+</md-toolbar>
+<md-tabs md-dynamic-height md-border-bottom>
+  <template md-tab label="Home">
+    <md-content class="md-padding">
+      <h1 class="md-display-2">Home</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque
+        ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est,
+        sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+    </md-content>
+  </template>
+  <template md-tab label="Products">
+    <md-content class="md-padding">
+      <h1 class="md-display-2">Products</h1>
+      <div>
+      <ul>
+        <li *ngFor="#party of parties">
+          {{party.productName}}
+          <p>{{party.description}}</p>
+          <p>{{party.location}}</p>
+        </li>
+      </ul>
+    </div>
+    </md-content>
+  </template>
+  <template md-tab label="Categories">
+    <md-content class="md-padding">
+      <h1 class="md-display-2">Check out</h1>
+      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
+        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
+        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
+        commodo lectus.</p>
+    </md-content>
+  </template>
+  <template md-tab label="CheckOut/Login" style="float:right">
+    <md-content class="md-padding">
+      <h1 class="md-display-2">Check out</h1>
+      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
+        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
+        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
+        commodo lectus.</p>
+        <button md-button class="md-icon-button md-accent" aria-label="Favorite">
+  <i md-icon>favorite</i>
+</button>
+    </md-content>
+  </template>
+</md-tabs>

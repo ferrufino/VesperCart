@@ -4,6 +4,7 @@ import 'ng2-material/all.webpack';
 import {MATERIAL_PROVIDERS, MATERIAL_DIRECTIVES} from 'ng2-material/all';
 import {Component} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
+import {Products} from '../collections/products';
 
 @Component({
   selector: 'app',
@@ -11,9 +12,9 @@ import {bootstrap} from 'angular2/platform/browser';
   directives: [MATERIAL_DIRECTIVES]
 })
 class Socially {
-  parties: Array<Object>;
+  products: Array<Object>;
   constructor() {
-  this.parties = [
+  this.products = [
     {'productName': 'Banana',
       'description': '10$ / kg',
       'location': 'Palo Alto'

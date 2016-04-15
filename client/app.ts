@@ -1,34 +1,36 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import 'ng2-material/all.webpack';
+//import 'bootstrap4-webpack-package';
 import {MATERIAL_PROVIDERS, MATERIAL_DIRECTIVES} from 'ng2-material/all';
-import {Component} from 'angular2/core';
+import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, APP_BASE_HREF} from 'angular2/router';
+import {NgZone, Component, provide} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
 import {Products} from '../collections/products';
+import {Tracker} from 'meteor/tracker';
+import {FrozenComponent} from './imports/categories/Frozen/frozen';
 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
-  directives: [MATERIAL_DIRECTIVES]
+  directives: [
+  	MATERIAL_DIRECTIVES,
+  	ROUTER_DIRECTIVES]
 })
+@RouteConfig([
+	{path:'/frozen', as: 'Frozen', component: FrozenComponent}
+])
 class Socially {
   products: Array<Object>;
-  constructor() {
-  this.products = [
-    {'productName': 'Banana',
-      'description': '10$ / kg',
-      'location': 'Palo Alto'
-    },
-    {'productName': 'Marihuana',
-      'description': '300$ / oz',
-      'location': 'Palo Alto'
-    },
-    {'productName': 'Chetos',
-      'description': '10$ / bag',
-      'location': 'San Francisco'
-    }
-  ];
-}
+
+      constructor(zone: NgZone) {
+        Tracker.autorun(() => zone.run(() => {
+        this.products = Products.find().fetch();
+        }));
+      }
 }
 
-bootstrap(Socially, [MATERIAL_PROVIDERS]);
+bootstrap(Socially, [
+	MATERIAL_PROVIDERS, 
+	ROUTER_PROVIDERS,
+	provide(APP_BASE_HREF, { useValue: '/' })]);

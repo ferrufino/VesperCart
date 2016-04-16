@@ -6,23 +6,30 @@
   <input type="text" id="search">
   </span>
   <span id="ImgDiv" align="right">
-  <img id="Img" src="http://www.ecosjewel.com/assets/order/shopping_cart-cfe0556f2ed6f626abad8c6c0ba13299.png">
+    <button md-fab class="md-primary" aria-label="Cart">
+        <i md-icon><img href="client/img/cart.png"> cart</i>
+    </button>
   </span>
   <span flex></span>
   <div class="navbar-right navbar-text">
   </div>
 </md-toolbar>
-<div>
-<nav>
-	<a [routerLink]="['Fruits']">Fruits & Vegetables</a>
-	<a [routerLink]="['Pantry']">Pantry</a>
-	<a [routerLink]="['Frozen']">Frozen</a>
-	<a [routerLink]="['Meat']">Meat & Fish</a>
-	<a [routerLink]="['Wine']">Wine & Alcohol</a>
-	<a [routerLink]="['Drinks']">Drinks</a>
-</nav>
+<div class="navBar">
+<ul>
+    <li><a [routerLink]="['Fruits']">Fruits & Vegetables</a></li>
+    <li><a [routerLink]="['Pantry']">Pantry</a></li>
+    <li><a [routerLink]="['Frozen']">Frozen</a></li>
+    <li><a [routerLink]="['Meat']">Meat & Fish</a></li>
+    <li><a [routerLink]="['Wine']">Wine & Alcohol</a></li>
+    <li><a [routerLink]="['Drinks']">Drinks</a></li>
+</ul>
+
 <router-outlet></router-outlet>
 </div>
+
+<!-- heart btn -->
 <button md-button class="md-icon-button md-accent" aria-label="Favorite">
       <i md-icon>favorite</i>
-    </button>
+</button>
+
+<img src="/img/cart.png" style="width:304px;height:228px;">

@@ -1,96 +1,28 @@
-<!--
-<nav>
-  <a [routerLink]="['/Frozen']">Frozen</a>
-  <a>Meat</a>
-</nav>
-<router-outlet></router-outlet>
--->
 <md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
-  <h2>
-    <a ui-sref="parties"><span class="md-title">Vesper Cart</span></a>
+  <h2 >
+    <a ui-sref="parties" class="logo"><span class="md-title"[routerLink]="['Home']">Vesper Cart</span></a>
   </h2>
+  <span id="search">
+  <input type="text" id="search">
+  </span>
+  <span id="ImgDiv" align="right">
+  <img id="Img" src="http://www.ecosjewel.com/assets/order/shopping_cart-cfe0556f2ed6f626abad8c6c0ba13299.png">
+  </span>
   <span flex></span>
   <div class="navbar-right navbar-text">
   </div>
 </md-toolbar>
-<md-tabs md-dynamic-height md-border-bottom>
+<div>
 <nav>
-  <a> 
-  <template md-tab label="Frozen" >
-  </template>
-  </a>
-  <template md-tab label="Licor & Wines">
-    <md-content class="md-padding">
-      <h1 class="md-display-2">Products</h1>
-      <button [routerLink]="['/Frozen']">tu mama</button>
-      <div>
-      <ul>
-        <li *ngFor="#product of products">
-          {{product.name}}
-          <p>{{product.description}}</p>
-          <p>{{product.location}}</p>
-        </li>
-      </ul>
-    </div>
-    </md-content>
-  </template>
-  <template md-tab label="Drinks">
-    <md-content class="md-padding">
-      <h1 class="md-display-2">Check out</h1>
-      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
-        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
-        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
-        commodo lectus.</p>
-    </md-content>
-  </template>
-  <template md-tab label="Bakery" style="float:right">
-    <md-content class="md-padding">
-      <h1 class="md-display-2">Check out</h1>
-      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
-        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
-        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
-        commodo lectus.</p>
-        <button md-button class="md-icon-button md-accent" aria-label="Favorite">
-  <i md-icon>favorite</i>
-</button>
-    </md-content>
-  </template>
-    <template md-tab label="Meat & Fish" style="float:right">
-    <md-content class="md-padding">
-      <h1 class="md-display-2">Check out</h1>
-      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
-        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
-        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
-        commodo lectus.</p>
-        <button md-button class="md-icon-button md-accent" aria-label="Favorite">
-    <i md-icon>favorite</i>
+	<a [routerLink]="['Fruits']">Fruits & Vegetables</a>
+	<a [routerLink]="['Pantry']">Pantry</a>
+	<a [routerLink]="['Frozen']">Frozen</a>
+	<a [routerLink]="['Meat']">Meat & Fish</a>
+	<a [routerLink]="['Wine']">Wine & Alcohol</a>
+	<a [routerLink]="['Drinks']">Drinks</a>
+</nav>
+<router-outlet></router-outlet>
+</div>
+<button md-button class="md-icon-button md-accent" aria-label="Favorite">
+      <i md-icon>favorite</i>
     </button>
-    </md-content>
-  </template>
-    <template md-tab label="Fruit & Vegetables" style="float:right">
-    <md-content class="md-padding">
-      <h1 class="md-display-2">Check out</h1>
-      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
-        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
-        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
-        commodo lectus.</p>
-        <button md-button class="md-icon-button md-accent" aria-label="Favorite">
-    <i md-icon>favorite</i>
-    </button>
-    </md-content>
-  </template>
-    <template md-tab label="Pantry" style="float:right">
-    <md-content class="md-padding">
-      <h1 class="md-display-2">Check out</h1>
-      <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum.
-        Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum
-        nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus
-        commodo lectus.</p>
-        <button md-button class="md-icon-button md-accent" aria-label="Favorite">
-  <i md-icon>favorite</i>
-</button>
-    </md-content>
-  </template>
-  </nav>
-  <router-outlet></router-outlet>
-</md-tabs>

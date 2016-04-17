@@ -1,0 +1,28 @@
+ .categories ul#menu{
+    text-align: center;
+    width: 100%;
+ }
+ .categories ul#menu li{
+    min-width: 696px;
+    width: auto;
+    display: inline;
+    padding: 15px;
+ }
+.categories ul#menu li:hover, ul#menu li.selected{
+    background-color: #999;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    width: auto;
+}
+.categories li {
+    display: inline-block;
+    border-right: 1px solid #bbb;
+    width: auto;
+}
+.categories li:last-child {
+     border-right: none;
+}
+.categories #menuDiv{
+    border-bottom: solid;
+}

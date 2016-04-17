@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import {Component, NgZone} from 'angular2/core';
-import {Products} from '../collections/products';
+import {Products} from '../../collections/products';
 import {Tracker} from 'meteor/tracker';
 
 @Component({
@@ -14,7 +14,7 @@ export class HomeComponent{
 
 	constructor(zone: NgZone){
 		Tracker.autorun(() => zone.run(() => {
-		this.products = Products.find.fetch();
+		this.products = Products.find().fetch();
 		}));
 	}
 }

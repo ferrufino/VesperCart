@@ -4,11 +4,7 @@ import {Component} from 'angular2/core';
 
 @Component({
 	selector: 'fruits-component',
-	template:`
-	fruits
-	fruits
-	fruits
-	`
+	templateUrl: 'client/categories/fruits-component.html'
 })
 
 export class FruitsComponent{

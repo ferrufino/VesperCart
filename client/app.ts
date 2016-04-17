@@ -18,7 +18,7 @@ import {MeatComponent} from './categories/meat-component';
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
-  styleUrls: ['styles.css'],
+  styleUrls: ['/client/styles/app.css'],
   directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES,HomeComponent]
 })
 

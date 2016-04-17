@@ -4,6 +4,7 @@ import 'ng2-material/all.webpack';
 import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from "ng2-material/all";
 import {Component,provide} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
+//import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, APP_BASE_HREF} from 'angular2/router';
 import {HomeComponent} from './home/home';
 import {FruitsComponent} from './categories/fruits-component';
@@ -12,14 +13,14 @@ import {DrinksComponent} from './categories/drinks-component';
 import {FrozenComponent} from './categories/frozen-component';
 import {WineComponent} from './categories/wine-component';
 import {MeatComponent} from './categories/meat-component';
-
+import {ProductDetails} from './product-detail/product-detail';
 
 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
   styleUrls: ['/client/styles/app.css'],
-  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES,HomeComponent]
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES]
 })
 
 @RouteConfig([
@@ -29,7 +30,9 @@ import {MeatComponent} from './categories/meat-component';
 	{path: '/home/category/drinks', as: 'Drinks', component: DrinksComponent},
 	{path: '/home/category/wine', as: 'Wine', component: WineComponent},
 	{path: '/home/category/frozen', as: 'Frozen', component: FrozenComponent},
-	{path: '/home/category/meat', as: 'Meat', component: MeatComponent}
+	{path: '/home/category/meat', as: 'Meat', component: MeatComponent},
+	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails }
+
 ])
 class App { }
  

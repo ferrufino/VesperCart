@@ -1,1 +1,3 @@
-import {Products} from '../collections/products.ts';
+import {loadProducts} from './load-products.ts';
+
+Meteor.startup(loadProducts);

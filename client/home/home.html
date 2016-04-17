@@ -1,8 +1,8 @@
-<div>
-  <ul>
-    <li *ngFor="#product of products">
-      {{product.name}}
-      <p>{{product.description}}</p>
-    </li>
-  </ul>
+<div id="background" class="grid grid-pad">
+    <div *ngFor="#product of products" class="col-1-4">
+    	<div>
+      		{{product.name}}
+      		<p>{{product.description}}</p>
+    	</div>
+   	</div>
 </div>

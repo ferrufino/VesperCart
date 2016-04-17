@@ -6,7 +6,8 @@ import {Tracker} from 'meteor/tracker';
 
 @Component({
 	selector: 'home-component',
-	templateUrl: '/client/home/home.html'
+	templateUrl: '/client/home/home.html',
+	styleUrls: ['/client/styles/home.css'],
 })
 
 export class HomeComponent{

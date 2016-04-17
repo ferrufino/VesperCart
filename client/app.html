@@ -10,7 +10,7 @@
 
 </md-toolbar>
 <div class="categories">
-    <ul>
+    <ul id="menu">
         <li class="display"><a [routerLink]="['Fruits']">Fruits & Vegetables</a></li>
         <li class="display"><a [routerLink]="['Pantry']">Pantry</a></li>
         <li class="display"><a [routerLink]="['Frozen']">Frozen</a></li>
@@ -22,7 +22,4 @@
     <router-outlet></router-outlet>
 </div>
 
-<!-- heart btn -->
-<button md-button class="md-icon-button md-accent" aria-label="Favorite">
-    <i md-icon>favorite</i>
-</button>
+

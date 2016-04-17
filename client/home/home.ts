@@ -1,6 +1,8 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
-import {Component} from 'angular2/core';
+import {Component, NgZone} from 'angular2/core';
+import {Products} from '../collections/products';
+import {Tracker} from 'meteor/tracker';
 
 @Component({
 	selector: 'home-component',
@@ -8,5 +10,11 @@ import {Component} from 'angular2/core';
 })
 
 export class HomeComponent{
-	
+	products: Array<Object>;
+
+	constructor(zone: NgZone){
+		Tracker.autorun(() => zone.run(() => {
+		this.products = Products.find.fetch();
+		}));
+	}
 }

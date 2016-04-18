@@ -21,3 +21,40 @@
     padding: 14px 16px;
     text-decoration: none;
 }
+
+#searchBox{
+    margin: auto;
+    width: 60%;
+    padding: 30px;
+}
+
+.search{
+    background-color: white;
+    font-style: sans-serif;
+    color: black;
+}
+
+#searchBox{
+    margin: auto;
+    width: 45%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    background-color: black;
+}
+
+.contaier2 div#searchBox{
+    position: absolute;
+    bottom: 0;
+}
+#searchBox i{
+text-align: right;
+}
+#Cart{
+    padding-right: 50px;
+}
+
+#Cart i{
+    margin: auto;
+    width: 45%;
+    padding: 10px;
+}

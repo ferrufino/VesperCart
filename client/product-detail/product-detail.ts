@@ -7,6 +7,7 @@ import {Products} from '../../collections/products';
 @Component({
   selector: 'product-detail',
   templateUrl: 'client/product-detail/product-detail.html',
+  styleUrls: ['/client/styles/product-details.css'],
   directives: [RouterLink]
 })
 export class ProductDetails {

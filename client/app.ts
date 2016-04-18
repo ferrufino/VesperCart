@@ -14,13 +14,13 @@ import {FrozenComponent} from './categories/frozen-component';
 import {WineComponent} from './categories/wine-component';
 import {MeatComponent} from './categories/meat-component';
 import {ProductDetails} from './product-detail/product-detail';
-
+import {FooterComponent} from './footer/footer-component';
 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
   styleUrls: ['/client/styles/app.css'],
-  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES]
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent]
 })
 
 @RouteConfig([

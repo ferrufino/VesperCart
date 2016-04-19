@@ -1,0 +1,15 @@
+.background{
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px;
+  max-height: 800px;
+  height:400px;
+}
+#detail{
+    margin: auto;
+    width: 60%;
+    padding: 30px;
+}

@@ -4,7 +4,7 @@ import {Component} from 'angular2/core';
 
 @Component({
 	selector: 'fruits-component',
-	templateUrl: 'client/categories/fruits-component.html'
+	templateUrl: '/client/categories/fruits-component.html'
 })
 
 export class FruitsComponent{

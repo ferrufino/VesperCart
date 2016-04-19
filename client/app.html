@@ -1,13 +1,15 @@
+<div class="container2">
 <md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
     <h2 >
         <a ui-sref="parties" class="logo"><span class="md-title"[routerLink]="['Home']">Vesper Cart</span></a>
     </h2>
-
-  <button md-fab class="md-fab" aria-label="Eat cake">
-      <i md-icon>cake</i>
-  </button>
-
-
+    <span id="searchBox">
+        <input class="search">
+        <i class="material-icons">search</i>
+    </span>
+    <span id="Cart">
+        <i class="material-icons">shopping_cart</i>
+    </span>
 </md-toolbar>
 <div class="categories">
     <ul id="menu">
@@ -18,8 +20,11 @@
         <li class="display"><a [routerLink]="['Wine']">Wine & Alcohol</a></li>
         <li class="display"><a [routerLink]="['Drinks']">Drinks</a></li>
     </ul>
-
     <router-outlet></router-outlet>
 </div>
+</div>
+<footer-component></footer-component>
+
+
 
 

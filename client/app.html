@@ -12,18 +12,15 @@
     </span>
 </md-toolbar>
 <div class="categories">
-    <ul id="menu">
-        <li class="display"><a [routerLink]="['Fruits']">Fruits & Vegetables</a></li>
-        <li class="display"><a [routerLink]="['Pantry']">Pantry</a></li>
-        <li class="display"><a [routerLink]="['Frozen']">Frozen</a></li>
-        <li class="display"><a [routerLink]="['Meat']">Meat & Fish</a></li>
-        <li class="display"><a [routerLink]="['Wine']">Wine & Alcohol</a></li>
-        <li class="display"><a [routerLink]="['Drinks']">Drinks</a></li>
-    </ul>
+<ul id="menu">
+    <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
+</ul>
     <router-outlet></router-outlet>
 </div>
 </div>
 <footer-component></footer-component>
+
+
 
 
 

@@ -41,7 +41,7 @@ h3 {
     padding: 20px;
     text-align: right;
     color: #eee;
-    max-height: 150px;
+    max-height: 160px;
     min-width: 120px;
     background-color: #607D8B;
     border-radius: 2px;
@@ -51,10 +51,7 @@ h4 {
   font-size: 3.5vw;
 }
 .module:hover {
-  background-color: #EEE;
-  cursor: pointer;
-  color: #607d8b;
-  max-height: 150px;
+  max-height: 160px;
 }
 .grid-pad {
   padding: 10px 0;

@@ -12,15 +12,20 @@ import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 	selector: 'home-component',
 	templateUrl: '/client/home/home.html',
 	styleUrls: ['/client/styles/home.css'],
-	directives: [RouterLink]
+	directives: [
+		RouterLink
+		]
 })
 
 export class HomeComponent{
-	products: Array<Object>;
+	products: Array<Object>
+	prod: Array<Object>;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
-		this.products = Products.find().fetch();
+		this.prod = Products.find().fetch();
 		}));
+
+		this.products = this.prod.slice(0,12);
 	}
 }

@@ -2,19 +2,15 @@ import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import 'ng2-material/all.webpack';
 import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from "ng2-material/all";
-import {Component,provide} from 'angular2/core';
+import {Component,provide, OnInit, NgZone} from 'angular2/core';
+import {Tracker} from 'meteor/tracker';
 import {bootstrap} from 'angular2/platform/browser';
-//import {bootstrap} from 'angular2-meteor-auto-bootstrap';
+import {Categories} from '../collections/categories';
 import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, APP_BASE_HREF} from 'angular2/router';
 import {HomeComponent} from './home/home';
-import {FruitsComponent} from './categories/fruits-component';
-import {PantryComponent} from './categories/pantry-component';
-import {DrinksComponent} from './categories/drinks-component';
-import {FrozenComponent} from './categories/frozen-component';
-import {WineComponent} from './categories/wine-component';
-import {MeatComponent} from './categories/meat-component';
 import {ProductDetails} from './product-detail/product-detail';
 import {FooterComponent} from './footer/footer-component';
+import {DisplayCategory} from './categories/display-category';
 
 @Component({
   selector: 'app',
@@ -25,15 +21,18 @@ import {FooterComponent} from './footer/footer-component';
 
 @RouteConfig([
 	{path: '/home', as: 'Home', component: HomeComponent, useAsDefault:true},
-	{path: '/home/category/fruits', as: 'Fruits', component: FruitsComponent},
-	{path: '/home/category/pantry', as: 'Pantry', component: PantryComponent},
-	{path: '/home/category/drinks', as: 'Drinks', component: DrinksComponent},
-	{path: '/home/category/wine', as: 'Wine', component: WineComponent},
-	{path: '/home/category/frozen', as: 'Frozen', component: FrozenComponent},
-	{path: '/home/category/meat', as: 'Meat', component: MeatComponent},
-	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails }
-
+	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails },
+	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory }
 ])
-class App { }
+
+class App {
+	categories: Array<Object>;
+
+	constructor (zone: NgZone) {
+    Tracker.autorun(() => zone.run(() => {
+		this.categories = Categories.find().fetch();
+		}));
+	}
+}
  
 bootstrap(App, [MATERIAL_PROVIDERS, ROUTER_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' })]);

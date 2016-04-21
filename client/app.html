@@ -3,12 +3,11 @@
     <h2 >
         <a ui-sref="parties" class="logo"><span class="md-title"[routerLink]="['Home']">Vesper Cart</span></a>
     </h2>
-    <span id="searchBox">
-        <input class="search">
-        <i class="material-icons">search</i>
-    </span>
+    <div id="searchcomponent">
+        <search-component></search-component>
+    </div>
     <span id="Cart">
-        <i class="material-icons">shopping_cart</i>
+        <i class="material-icons" >shopping_cart</i>
     </span>
 </md-toolbar>
 <div class="categories">
@@ -20,7 +19,7 @@
 </div>
 <footer-component></footer-component>
 
-
+<!--[routerLink]="['/Search',{pId: product._id}]"-->
 
 
 

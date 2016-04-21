@@ -22,33 +22,6 @@
     text-decoration: none;
 }
 
-#searchBox{
-    margin: auto;
-    width: 60%;
-    padding: 30px;
-}
-
-.search{
-    background-color: white;
-    font-style: sans-serif;
-    color: black;
-}
-
-#searchBox{
-    margin: auto;
-    width: 45%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-    background-color: black;
-}
-
-.contaier2 div#searchBox{
-    position: absolute;
-    bottom: 0;
-}
-#searchBox i{
-text-align: right;
-}
 #Cart{
     padding-right: 50px;
 }
@@ -57,4 +30,13 @@ text-align: right;
     margin: auto;
     width: 45%;
     padding: 10px;
+}
+
+#searchcomponent{
+    margin:auto;
+    width: 40%;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
 }

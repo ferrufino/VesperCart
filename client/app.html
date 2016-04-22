@@ -3,9 +3,10 @@
     <h2 >
         <a ui-sref="parties" class="logo"><span class="md-title"[routerLink]="['Home']">Vesper Cart</span></a>
     </h2>
-    <div id="searchcomponent">
+    <div id = "searchcomponent"></div>
+    <!--<div id="searchcomponent">
         <search-component></search-component>
-    </div>
+    </div>-->
     <span id="Cart">
         <i class="material-icons" >shopping_cart</i>
     </span>
@@ -13,7 +14,9 @@
 <div class="categories">
 <ul id="menu">
     <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
+    <li id="searchTab" [routerLink]="['Search']"><a><i class="material-icons sear">search</i></a></li>
 </ul>
+
     <router-outlet></router-outlet>
 </div>
 </div>

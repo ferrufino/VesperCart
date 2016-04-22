@@ -1,0 +1,21 @@
+<div id="relleno">
+	<h4>{{category.name}}</h4>
+	<div id="background" class="grid grid-pad">
+		<div *ngFor="#product of products">
+			<div *ngIf="product.category == category.id" >
+				<div class="col-1-4">
+					<div class="module hero">
+						<div id="name">
+						{{product.name}}
+						</div>
+						<p>{{product.description}}{{product.id}}</p>
+						<button md-raised-button class="md-raised details" [routerLink]="['/ProductDetails', {productId: product._id}]" >Details</button>
+						<button md-fab class="md-fab" aria-label="Eat cake"><i class="material-icons">add</i></button>
+					</div>
+				</div>
+				<div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

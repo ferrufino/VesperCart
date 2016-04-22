@@ -11,12 +11,13 @@ import {HomeComponent} from './home/home';
 import {ProductDetails} from './product-detail/product-detail';
 import {FooterComponent} from './footer/footer-component';
 import {DisplayCategory} from './categories/display-category';
+import {SearchComponent} from './search/search-component';
 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
   styleUrls: ['/client/styles/app.css'],
-  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent]
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent, SearchComponent]
 })
 
 @RouteConfig([

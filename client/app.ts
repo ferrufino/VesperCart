@@ -17,13 +17,14 @@ import {SearchComponent} from './search/search-component';
   selector: 'app',
   templateUrl: 'client/app.html',
   styleUrls: ['/client/styles/app.css'],
-  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent, SearchComponent]
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent]
 })
 
 @RouteConfig([
 	{path: '/home', as: 'Home', component: HomeComponent, useAsDefault:true},
 	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails },
-	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory }
+	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory },
+	{path: '/home/search', as: 'Search', component: SearchComponent}
 ])
 
 class App {

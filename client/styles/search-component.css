@@ -1,4 +1,34 @@
-
+.relleno{
+    padding-top: 20px;
+} 
+#background{
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px;
+  max-height: 800px;
+  height:600px;
+}
+#searchHolder{
+    background-color: white;
+    border-radius: 40px;
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    height: 50px;
+    border:solid 1px black;
+}
+#holder{
+    border-bottom: 1px solid black;
+}
+#detail{
+    margin: auto;
+    width: 60%;
+    padding: 30px;
+}
+/*
 .contaier2{
     width: 50%;
     margin: 0 auto;
@@ -20,3 +50,4 @@
 .sear{
     margin-top: 7px;
 }
+*/

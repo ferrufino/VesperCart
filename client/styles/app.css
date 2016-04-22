@@ -8,6 +8,7 @@
 
  .categories ul#menu li.display{
     float: left;
+    border-right: 1px solid #bbb;
  }
 
  .categories ul#menu li:hover, ul#menu li.selected{
@@ -35,8 +36,17 @@
 #searchcomponent{
     margin:auto;
     width: 40%;
-    border: 1px solid white;
     padding: 10px;
-    background-color: #333;
-    border-radius: 10px;
+}
+
+.sear{
+    text-align: right;
+    float:right;
+    padding-right: 50px;
+    padding-top: 13px;
+    color: white;
+    
+}
+#searchTab{
+    border-left: 3px solid white;    
 }

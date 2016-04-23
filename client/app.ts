@@ -13,6 +13,7 @@ import {FooterComponent} from './footer/footer-component';
 import {DisplayCategory} from './categories/display-category';
 import {SearchComponent} from './search/search-component';
 import {AdminComponent} from './admin/admin-component';
+
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
@@ -25,7 +26,8 @@ import {AdminComponent} from './admin/admin-component';
 	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails },
 	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory },
 	{path: '/home/search', as: 'Search', component: SearchComponent},
-	{path: '/home/admin', as: 'Admin', component: AdminComponent}
+	{path: '/home/admin', as: 'Admin', component: AdminComponent},
+  {path: '/home/admin/:productId', as: 'AdminUD', component: AdminUpdateDelete}
 ])
 
 class App {
@@ -37,5 +39,5 @@ class App {
 		}));
 	}
 }
- 
+
 bootstrap(App, [MATERIAL_PROVIDERS, ROUTER_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' })]);

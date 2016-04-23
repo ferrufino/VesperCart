@@ -14,7 +14,7 @@
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.left{
+.leftObj{
   text-align: left;
   border-right: 1px solid black;
   width: 50%;
@@ -23,7 +23,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.right{
+.rightObj{
   text-align: right;
   width: 50%;
   height: 550px;

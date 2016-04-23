@@ -1,4 +1,8 @@
-.footer{
+div.footer footer{
+	background-color: #35428e;
+	color: #3542ca;
+}
+.page-footer{
 	background-color: #35428e;
 	color: #3542ca;
 }

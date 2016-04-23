@@ -23,7 +23,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.rightObj{
+#background div.rightObj{
   text-align: right;
   width: 50%;
   height: 550px;

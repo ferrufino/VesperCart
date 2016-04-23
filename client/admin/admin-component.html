@@ -1,4 +1,4 @@
-<div layout="column" class="md-inline-form">
+<!--<div layout="column" class="md-inline-form">
     <div id="block">
       <form [ngFormModel]="partiesForm" #f="ngForm" (submit)="addParty(f.value)">
         <div layout-gt-sm="row">
@@ -45,4 +45,36 @@
         </md-input-container>
       </form>
     </div>
+</div>-->
+<div class="fondo">
+  <div id="relleno"></div>
+  <div id="background3" >
+    <div  class="productD">
+      <h4>Product Update</h4>
+      <div *ngIf="selectedproduct">
+      <form (submit)="saveProduct(selectedproduct)">
+      <span id="namee">
+        <label >Name: </label>
+       </span>
+        <input [(ngModel)]="selectedproduct.name" >
+        <br>
+      <label>Description: </label>
+      <input [(ngModel)]="selectedproduct.description"  ><br>
+      <label>Quantity: </label>
+      <input [(ngModel)]="selectedproduct.quantity"  ><br>
+      <label>Img: </label>
+      <input [(ngModel)]="selectedproduct.img"><br>
+      <label>category: </label>
+      <input [(ngModel)]="selectedproduct.category"  ><br>
+      <label>store name: </label>
+      <input [(ngModel)]="selectedproduct.storeName" ><br>
+       <button md-raised-button class="md-raised md-primary" type="submit">Update</button>
+       </form>
+       <button md-raised-button class="md-raised md-primary" (click)="onRemove(selectedproduct)">Remove</button>
+      </div>
+    </div>
+    <div id="productHolder">
+       <div *ngFor="#product of products" (click)="onSelect(product)"><label >{{product.name}}</label></div>     
+    </div>
+  </div>
 </div>

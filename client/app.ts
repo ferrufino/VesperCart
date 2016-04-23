@@ -41,5 +41,5 @@ class App {
 		}));
 	}
 }
- 
+
 bootstrap(App, [MATERIAL_PROVIDERS, ROUTER_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' })]);

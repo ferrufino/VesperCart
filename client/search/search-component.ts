@@ -18,6 +18,7 @@ export class SearchComponent {
 	products: Array<Object>;
 	product2: Object;
 	product3: Object;
+	search: Object;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
@@ -26,14 +27,17 @@ export class SearchComponent {
 	}
 
 	onSearch(product){
-		alert(product)
+	//		alert(product)
 		for(var i=0; i<this.products.length;i++)
 		{	
 			this.product2=this.products[i];
 			if(this.product2.name==product){
 				this.product3=this.product2;
-				alert(this.product3.name);
+				this.search=1;
+				break;
+				//alert(this.product3.name);
 			}
+			this.search=0;
 		}
 	}
 }

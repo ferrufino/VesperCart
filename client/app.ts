@@ -12,7 +12,7 @@ import {ProductDetails} from './product-detail/product-detail';
 import {FooterComponent} from './footer/footer-component';
 import {DisplayCategory} from './categories/display-category';
 import {SearchComponent} from './search/search-component';
-
+import {AdminComponent} from './admin/admin-component';
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
@@ -24,7 +24,8 @@ import {SearchComponent} from './search/search-component';
 	{path: '/home', as: 'Home', component: HomeComponent, useAsDefault:true},
 	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails },
 	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory },
-	{path: '/home/search', as: 'Search', component: SearchComponent}
+	{path: '/home/search', as: 'Search', component: SearchComponent},
+	{path: '/home/admin', as: 'Admin', component: AdminComponent}
 ])
 
 class App {

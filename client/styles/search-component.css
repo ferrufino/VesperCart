@@ -23,7 +23,7 @@
 #holder{
     border-bottom: 1px solid black;
 }
-#detail{
+.detail{
     margin: auto;
     width: 60%;
     padding: 30px;

@@ -11,31 +11,5 @@ import {DOM} from "angular2/src/platform/dom/dom_adapter";
 })
 
 export class FooterComponent{
- status = '  ';
-  customFullscreen = this.media.hasMedia('xs') || this.media.hasMedia('sm');
-  constructor(public dialog: MdDialog,
-              public media: Media,
-              public element: ElementRef) {
-  }
-  showConfirm(ev) {
-    let config = new MdDialogConfig()
-      .textContent('All of the banks have agreed to forgive you your debts.')
-      .clickOutsideToClose(false)
-      .title('Would you like to delete your debt?')
-      .ariaLabel('Lucky day')
-      .ok('Please do it!')
-      .cancel('Sounds like a scam')
-      .targetEvent(ev);
-    this.dialog.open(MdDialogBasic, this.element, config)
-      .then((ref: MdDialogRef) => {
-        ref.whenClosed.then((result) => {
-          if (result) {
-            this.status = 'You decided to get rid of your debt.';
-          }
-          else {
-            this.status = 'You decided to keep your debt.';
-          }
-        })
-      });
-  };
+
 }

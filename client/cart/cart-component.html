@@ -1,0 +1,31 @@
+<div id="cart">
+        <span  (click)="open('right')"
+                [hidden]="rightOpened"
+                class="md-primary">
+          <i class="material-icons">
+	shopping_cart
+	</i>
+        </span>
+      <div flex></div>
+    <md-sidenav name="right" align="right" layout="column" (onShown)="input.focus()">
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Cart</h1>
+      </md-toolbar>
+      <md-content layout-padding>
+        <form>
+          <md-input-container class="md-block">
+            <label for="testInput">Test input</label>
+            <input type="text" id="testInput" md-input #input
+                   [(value)]="data" md-autofocus>
+          </md-input-container>
+        </form>
+        <button md-raised-button (click)="close('right')" class="md-primary">
+          Close Cart
+        </button>
+         <button md-raised-button class="md-primary" [routerLink]="['LoginRegister']"  (click)="close('right')">
+          Check out
+        </button>
+      </md-content>
+    </md-sidenav>
+</div>
+

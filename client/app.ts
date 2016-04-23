@@ -13,12 +13,15 @@ import {FooterComponent} from './footer/footer-component';
 import {DisplayCategory} from './categories/display-category';
 import {SearchComponent} from './search/search-component';
 import {AdminComponent} from './admin/admin-component';
+import {CartComponent} from './cart/cart-component';
+import {LoginRegisterComponent} from './login/login-register-component';
+
 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html',
   styleUrls: ['/client/styles/app.css'],
-  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent]
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent, CartComponent]
 })
 
 @RouteConfig([
@@ -27,7 +30,9 @@ import {AdminComponent} from './admin/admin-component';
 	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory },
 	{path: '/home/search', as: 'Search', component: SearchComponent},
 	{path: '/home/admin', as: 'Admin', component: AdminComponent},
-  {path: '/home/admin/:productId', as: 'AdminUD', component: AdminUpdateDelete}
+  {path: '/home/admin/:productId', as: 'AdminUD', component: AdminUpdateDelete},
+	{path: '/home/login', as: 'LoginRegister', component: LoginRegisterComponent}
+
 ])
 
 class App {

@@ -1,8 +1,9 @@
 #relleno{
 	  padding-top: 20px;
 }
-#background{
-  background-color: #f7f7f7;
+.fondo div#background{
+  background-color: white;
+  color: black;
   border-radius: 3px;
   text-align: center;
   margin: 1em;
@@ -10,6 +11,8 @@
   padding-bottom: 10px;
   max-height: 800px;
   height:600px;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 [class*='col-'] {
@@ -46,6 +49,7 @@ h3 {
     min-width: 120px;
     background-color: #607D8B;
     border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h4 {
   position: relative;
@@ -75,4 +79,7 @@ h4 {
 }
 .details{
     float: left;
+}
+.fondo{
+background-color: #f7f7f7;
 }

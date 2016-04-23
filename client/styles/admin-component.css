@@ -1,22 +1,18 @@
-@import '../../../ng2-material/core/style/variables';
-@import '../../../ng2-material/core/style/mixins';
-@import '../../../ng2-material/core/style/default-theme';
-.secret-project {
-  width: 256px;
-  height: 256px;
-  font-size: 256px;
-  color: md-color($md-primary, 900, 0.6);
+#main { 
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+#sidebar    {
+    width: 200px;
+    height: 400px;
+    background: red;
+    float: left;
 }
 
-md-input-container > select {
-  margin: 0;
-  order: 2;
-  display: flex;
-}
-
-#block{
-  width: 50em;
-  background-color: #F7F7F7;
-  margin-top: 6em;
-  margin-left: 6em;
+#page-wrap  {
+    width: 600px;
+    background: #ffffff;
+    height: 400px;
+    float: right;
 }

@@ -17,14 +17,9 @@
     <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
     <li id="searchTab" [routerLink]="['Search']"><a><i class="material-icons sear">search</i></a></li>
 </ul>
-
-    <router-outlet></router-outlet>
 </div>
+    <router-outlet></router-outlet>
 </div>
 <footer-component></footer-component>
 
 <!--[routerLink]="['/Search',{pId: product._id}]"-->
-
-
-
-

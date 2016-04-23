@@ -10,6 +10,7 @@ import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 @Component({
 	selector: 'admin-component',
 	templateUrl: '/client/admin/admin-component.html',
+	styleUrls: ['/client/styles/admin-component.css'],
 	directives: []
 })
 

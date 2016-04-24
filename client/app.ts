@@ -41,21 +41,21 @@ class App {
 		this.categories = Categories.find().fetch();
 		}));
 
-    this.loadSession();
+
 	}
 
   loadSession(){
 
-		if(!Session.get('selectedProduct'))
+		if(!Session.get('sessionCart'))
 		{
-			Session.set('selectedProduct', myip);
-			var selectedPlayer = Session.get('selectedProduct');
+			Session.set('sessionCart', myip);
+			var ip = Session.get('sessionCart');
       alert("New session created");
-      alert(myip);
+      alert(ip);
 		}
 		else
 		{
-		  var temp = Session.get('selectedProduct');
+		  var temp = Session.get('sessionCart');
 		  alert("session already set");
 			alert(temp);
 		}

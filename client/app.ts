@@ -20,26 +20,30 @@ import {LoginRegisterComponent} from './login/login-register-component';
   selector: 'app',
   templateUrl: 'client/app.html',
   styleUrls: ['/client/styles/app.css'],
-  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent, CartComponent]
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES, FooterComponent, CartComponent,SearchComponent]
 })
 
 @RouteConfig([
 	{path: '/home', as: 'Home', component: HomeComponent, useAsDefault:true},
 	{ path: '/product/:productId', as: 'ProductDetails', component: ProductDetails },
 	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory },
-	{path: '/home/search', as: 'Search', component: SearchComponent},
+	{path: '/home/search/:searchInput', as: 'Search', component: SearchComponent},
 	{path: '/home/admin', as: 'Admin', component: AdminComponent},
 	{path: '/home/login', as: 'LoginRegister', component: LoginRegisterComponent}
 ])
 
 class App {
 	categories: Array<Object>;
+	search = null;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
 		this.categories = Categories.find().fetch();
 		}));
 	}
+
 }
+
+
 
 bootstrap(App, [MATERIAL_PROVIDERS, ROUTER_PROVIDERS, provide(APP_BASE_HREF, { useValue: '/' })]);

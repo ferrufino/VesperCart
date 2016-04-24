@@ -1,20 +1,28 @@
 <div class="container2">
-<md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
+    <md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
     <h2 id="logo">
         <a ui-sref="parties"><span class="md-title"[routerLink]="['Home']">Vesper Cart</span></a>
     </h2>
-    <div id = "searchcomponent"></div>
-     <button [routerLink]="['Admin']">Admin</button>
-    <span id="Cart">
-        <cart-component></cart-component>
-    </span>
-</md-toolbar>
-<div class="categories">
-<ul id="menu">
-    <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
-    <li id="searchTab" [routerLink]="['Search']"><a><i class="material-icons sear">search</i></a></li>
-</ul>
-</div>
+    
+    <div style="margin-left: 100px;width:200px;height: 50px;">
+        <input type="text" #searchInput (keyup)="0" style="width: 150px;">
+        <i [routerLink]="['/Search',{searchInput: searchInput.value}]"  class="material-icons sear">search</i>
+    </div>
+    
+        <div id = "searchcomponent"></div>
+        <button [routerLink]="['Admin']">Admin</button>
+        <span id="Cart">
+            <cart-component></cart-component>
+        </span>
+
+    </md-toolbar>
+    <div class="categories">
+        <ul id="menu">
+            <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
+            <!-- <li id="searchTab" [routerLink]="['Search']"><a><i class="material-icons sear">search</i></a></li> -->
+            <li></li>
+        </ul>
+    </div>
     <router-outlet></router-outlet>
 </div>
 <footer-component></footer-component>

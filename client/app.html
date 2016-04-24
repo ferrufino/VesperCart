@@ -19,8 +19,6 @@
     <div class="categories">
         <ul id="menu">
             <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
-            <!-- <li id="searchTab" [routerLink]="['Search']"><a><i class="material-icons sear">search</i></a></li> -->
-            <li ></li>
         </ul>
     </div>
     <router-outlet></router-outlet>

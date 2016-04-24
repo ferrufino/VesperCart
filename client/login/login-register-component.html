@@ -4,25 +4,81 @@
   <div id="background">
     <div class="leftObj">
       <form name="userForm">
-        <div layout-gt-sm="row" class="input">
+        <fieldset>
+          <legend>Login</legend>
+       <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
-            <label>Usename</label>
-            <input md-input placeholder="VesperUser@...">
+            <label>Username</label>
+            <input md-input >
           </md-input-container>
-        </div>
-        <div layout-gt-sm="row" class="input">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Password</label>
             <input md-input type="password">
           </md-input-container>
         </div>
         <span class="login">
-        <button md-raised-button class="md-raised md-primary">Login</button>
+        <button md-raised-button class="md-raised md-primary" (click)="loginAttempt()">Login</button>
         </span>
+        </fieldset>
       </form>
     </div >
     <div class="rightObj">
-      Right
+       <form name="userForm">
+       <fieldset>
+       <legend>SignUp</legend>
+       <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>First name</label>
+            <input md-input >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+            <input md-input >
+          </md-input-container>
+        </div>
+         <md-input-container class="md-block">
+          <label>Address</label>
+          <input md-input >
+        </md-input-container>
+        <div layout-gt-sm="row">
+         <md-input-container class="md-block" flex-gt-sm>
+          <label>City</label>
+          <input md-input >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <select >
+              <option *ngFor="#state of states" >
+                {{state.abbrev}}
+              </option>
+            </select>
+          </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Username</label>
+            <input md-input >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Passsword</label>
+            <input md-input type="password" >
+          </md-input-container>
+        </div>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Phone Number</label>
+            <input md-input ngControl="postalCode"  placeholder="12345"
+                   required mdPattern="^[0-9]{10}$" #postalCode="ngForm" mdMaxLength="10">
+             <div [md-messages]="postalCode" role="alert">
+            <div md-message="mdPattern">That doesn't look like a valid phone Number.</div>
+             <div md-message="required">You must supply a Phone Number.</div>
+            </div>
+          </md-input-container>
+        </div>
+        <span class="login">
+        <button md-raised-button class="md-raised md-primary" (click)="registerAttempt()">Register</button>
+        </span>
+        </fieldset>
+      </form>
     </div >
   </div>
 </div>

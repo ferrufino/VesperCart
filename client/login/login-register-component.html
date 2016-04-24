@@ -23,36 +23,39 @@
       </form>
     </div >
     <div class="rightObj">
-       <form name="userForm">
+       <form name="userForm" #ngForm="ngForm">
        <fieldset>
        <legend>SignUp</legend>
        <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>First name</label>
-            <input md-input >
+            <input md-input ngControl="fisrtName" required>
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm>
             <label>Last Name</label>
-            <input md-input >
+            <input md-input ngControl="lastName" required>
           </md-input-container>
         </div>
          <md-input-container class="md-block">
           <label>Address</label>
           <input md-input >
         </md-input-container>
-        <div layout-gt-sm="row">
-         <md-input-container class="md-block" flex-gt-sm>
-          <label>City</label>
-          <input md-input >
-          </md-input-container>
+         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
-            <select >
-              <option *ngFor="#state of states" >
-                {{state.abbrev}}
-              </option>
-            </select>
+            <label>Card Number</label>
+            <input md-input >
           </md-input-container>
-          </div>
+        </div>
+        <div layout-gt-sm="row">
+             <md-input-container class="md-block" flex-gt-sm>
+            <label>Security Code</label>
+            <input required md-input ngControl="securityCode" mdPattern="^[0-9]{3}$" mdMaxLength="3" #securityCode="ngForm">
+            <!-- <div [md-messages]="securityCode" role="alert">
+            <div md-message="mdPattern">That doesn't look like a valid security Code.</div>
+             <div md-message="required">You must supply a Security Code.</div>
+            </div>-->
+          </md-input-container>
+        </div>
           <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Username</label>
@@ -66,12 +69,12 @@
           <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Phone Number</label>
-            <input md-input ngControl="postalCode"  placeholder="12345"
+            <input md-input ngControl="postalCode" 
                    required mdPattern="^[0-9]{10}$" #postalCode="ngForm" mdMaxLength="10">
-             <div [md-messages]="postalCode" role="alert">
+            <!-- <div [md-messages]="postalCode" role="alert">
             <div md-message="mdPattern">That doesn't look like a valid phone Number.</div>
              <div md-message="required">You must supply a Phone Number.</div>
-            </div>
+            </div>-->
           </md-input-container>
         </div>
         <span class="login">

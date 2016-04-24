@@ -25,4 +25,17 @@ export class HomeComponent {
 		this.products = Products.find().fetch().slice(0,12);
 		}));
 	}
+
+	onSelectProduct(proNam){
+		if(!Session.get('selectedProduct'))
+		{
+		Session.set('selectedProduct', proNam);
+		var selectedPlayer = Session.get('selectedProduct');
+		alert(selectedPlayer);
+		}
+		else
+		{
+		alert("session already set");
+		}
+	}
 }

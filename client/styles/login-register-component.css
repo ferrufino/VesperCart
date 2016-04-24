@@ -1,3 +1,21 @@
+@import '../../../ng2-material/core/style/variables';
+@import '../../../ng2-material/core/style/mixins';
+@import '../../../ng2-material/core/style/default-theme';
+.secret-project {
+  width: 256px;
+  height: 256px;
+  font-size: 256px;
+  color: md-color($md-primary, 900, 0.6);
+}
+md-toolbar[md-hero] {
+  margin-bottom: 40px;
+}
+md-input-container > select {
+  margin: 0;
+  order: 2;
+  display: flex;
+}
+
 #relleno{
 	  padding-top: 20px;
 }
@@ -10,33 +28,55 @@
   position: relative !important;
   padding-bottom: 10px;
   max-height: 800px;
-  height:600px;
+  height:700px;
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .leftObj{
-  text-align: left;
+  /*text-align: left;
   border-right: 1px solid black;
   width: 50%;
   height: 550px;
   max-height: 800px;
   margin-top: 25px;
+  margin-bottom: 25px;*/
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 25px;
   margin-bottom: 25px;
+  border-right: 1px solid black;
+  height: 650px;
+  text-align: center;
 }
-#background div.rightObj{
-  text-align: right;
+.rightObj{
+  /*text-align: right;
   width: 50%;
   height: 550px;
   max-height: 800px;
   margin-top: 25px;
+  margin-bottom: 25px;*/
+  float: right;
+  border-left: 1px solid black;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 25px;
   margin-bottom: 25px;
+  width:50%;
+  height: 650px;
+  text-align: center;
 }
+
 form div.input{
+  margin: auto;
   text-align: center;
   width: 70%;
+  padding: 00px;
 }
 .login{
     margin: auto;
     width: 60%;
     padding: 10px;
 }
+

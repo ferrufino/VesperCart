@@ -40,7 +40,28 @@ class App {
     Tracker.autorun(() => zone.run(() => {
 		this.categories = Categories.find().fetch();
 		}));
+
+    this.loadSession();
 	}
+
+  loadSession(){
+
+		if(!Session.get('selectedProduct'))
+		{
+			Session.set('selectedProduct', myip);
+			var selectedPlayer = Session.get('selectedProduct');
+      alert("New session created");
+      alert(myip);
+		}
+		else
+		{
+		  var temp = Session.get('selectedProduct');
+		  alert("session already set");
+			alert(temp);
+		}
+
+	}
+
 
 }
 

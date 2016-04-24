@@ -1,15 +1,5 @@
 <div class="relleno">
     <div id="background">
-        <div id="holder">
-            <div id="searchHolder">
-                <span >
-                    <input type="text" #searchedProduct (keyup.enter)="onSearch(searchedProduct.value)"> 
-                </span>
-                <!--<span (click)="onSearch(searchedProduct.value)">
-                    <i class="material-icons">search</i>
-                </span>-->
-            </div>  
-        </div > 
         <div class="relleno">
         </div>
         <div *ngIf="search==1" >
@@ -36,17 +26,3 @@
         </div>
     </div>
 </div>
-<!--<div class="container2">
-    <span id="searchBox">
-        <input class="search" #searchedProduct>
-        <span id="searchIcon" (click)="onSearch(searchedProduct.value)">
-        	<i class="material-icons sear">search</i>
-        	<div *ngIf="product3" [routerLink]="['/ProductDetails', {productId: product3._id}]">
-				Results
-			</div>
-			<div *ngIf!="product3">
-				Sorry not Sorry
-			</div>
-        </span>
-    </span>
-</div>-->

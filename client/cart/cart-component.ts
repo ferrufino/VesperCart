@@ -1,8 +1,10 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
-import {Component} from 'angular2/core';
+import {Component, NgZone} from 'angular2/core';
 import {MATERIAL_DIRECTIVES, Media, SidenavService} from "ng2-material/all";
 import {RouterLink} from 'angular2/router';
+import {Carts} from '../../collections/carts';
+import {Tracker} from 'meteor/tracker';
 
 @Component({
 	selector: 'cart-component',
@@ -13,8 +15,13 @@ import {RouterLink} from 'angular2/router';
 })
 
 export class CartComponent{
-	  constructor(public sidenav: SidenavService,
-              public media: Media) {
+	cartList: Array<Object>;
+
+	constructor(public sidenav: SidenavService,
+              public media: Media, zone: NgZone) {
+			Tracker.autorun(() => zone.run(() => {
+				this.cartList = Carts.find({'ip':myip}).fetch();
+			}));
   }
   hasMedia(breakSize: string): boolean {
     return this.media.hasMedia(breakSize);
@@ -25,4 +32,6 @@ export class CartComponent{
   close(name: string) {
     this.sidenav.hide(name);
   }
+
+
 }

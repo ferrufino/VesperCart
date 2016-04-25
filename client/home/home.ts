@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import {Component, NgZone} from 'angular2/core';
 import {Products} from '../../collections/products';
+import {Carts} from '../../collections/carts';
 import {Tracker} from 'meteor/tracker';
 import {RouterLink} from 'angular2/router';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
@@ -19,28 +20,81 @@ import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 
 export class HomeComponent {
 	products: Array<Object>;
+	cartList: Array<Object>;
+	cl2: Object;
+	cl3: Object;
+	ans: Object;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
-		this.products = Products.find().fetch().slice(0,12);
+		 this.products = Products.find().fetch().slice(0,12);
+		 this.cartList = Carts.find().fetch();
 		}));
-
-
 	}
 
-	onSelectProduct(proNam){
-	
+	onSelectProduct(proName){
+
 		if(!Session.get('sessionCart'))
 		{
 			Session.set('sessionCart', myip);
 			var ip = Session.get('sessionCart');
-			alert("New session created");
+
 			alert(ip);
-		}else
+
+			for(var i=0; i<this.cartList.length;i++)
+			{
+				this.cl2 =this.cartList[i];
+				if(this.cl2.name == proName){
+					this.cl3 = this.cl2;
+					this.ans=1;
+					break;
+					//alert(this.cl3.name);
+				}
+				this.ans=0;
+			}
+
+			if(this.ans==0){
+				Carts.insert({
+					'ip': myip,
+					'name': proName,
+					'quantity': 1
+				})
+
+				alert("Product added");
+			}
+
+		}else if(Session.get('sessionCart') == myip)
 		{
-		  var temp = Session.get('sessionCart');
-		  alert("session already set");
-			alert(temp);
+			alert("session already set");
+
+			for(var i=0; i<this.cartList.length;i++)
+			{
+				this.cl2 =this.cartList[i];
+				if(this.cl2.name == proName){
+					this.cl3 = this.cl2;
+					this.ans=1;
+					break;
+					//alert(this.cl3.name);
+				}
+				this.ans=0;
+			}
+
+			if(this.ans==1){
+
+				alert("product already exists");
+				var cant = this.cl3.quantity;
+				cant = cant+1;
+				Carts.update({'name': proName, 'ip': myip }, { $set : {'name': proName,'ip': myip, 'quantity': cant }})
+			}else{ //new product
+
+			alert("new product");
+				Carts.insert({
+					'ip': myip,
+					'name': proName,
+					'quantity': 1
+				})
+			}
+
 		}
 
 	}

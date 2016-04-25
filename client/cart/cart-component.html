@@ -12,13 +12,12 @@
         <h1 class="md-toolbar-tools">Cart</h1>
       </md-toolbar>
       <md-content layout-padding>
-        <form>
-          <md-input-container class="md-block">
-            <label for="testInput">Test input</label>
-            <input type="text" id="testInput" md-input #input
-                   [(value)]="data" md-autofocus>
-          </md-input-container>
-        </form>
+        <ul>
+          <li *ngFor="#product of cartList" class="left">
+              {{product.name}}
+              {{product.quantity}}
+          </li>
+        </ul>
         <button md-raised-button (click)="close('right')" class="md-primary">
           Close Cart
         </button>
@@ -28,4 +27,3 @@
       </md-content>
     </md-sidenav>
 </div>
-

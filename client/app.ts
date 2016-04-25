@@ -40,28 +40,7 @@ class App {
     Tracker.autorun(() => zone.run(() => {
 		this.categories = Categories.find().fetch();
 		}));
-
-
 	}
-
-  loadSession(){
-
-		if(!Session.get('sessionCart'))
-		{
-			Session.set('sessionCart', myip);
-			var ip = Session.get('sessionCart');
-      alert("New session created");
-      alert(ip);
-		}
-		else
-		{
-		  var temp = Session.get('sessionCart');
-		  alert("session already set");
-			alert(temp);
-		}
-
-	}
-
 
 }
 

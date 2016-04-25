@@ -24,6 +24,7 @@ export class HomeComponent {
 	cl2: Object;
 	cl3: Object;
 	ans: Object;
+	aux: Object;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
@@ -33,6 +34,7 @@ export class HomeComponent {
 	}
 
 	onSelectProduct(proName){
+
 
 		if(!Session.get('sessionCart'))
 		{
@@ -62,7 +64,8 @@ export class HomeComponent {
 				alert("Product added");
 			}
 
-		}else if(Session.get('sessionCart') == myip)
+		}
+		else if(Session.get('sessionCart') == myip)
 		{
 			alert("session already set");
 
@@ -81,11 +84,23 @@ export class HomeComponent {
 			if(this.ans==1){
 
 				alert("product already exists");
-				var cant = this.cl3.quantity;
+				this.aux = this.cl3;
+				alert(this.aux.quantity);
+				var cant = this.aux.quantity
+				alert(cant);
 				cant = cant+1;
-				Carts.update({'name': proName, 'ip': myip }, { $set : {'name': proName,'ip': myip, 'quantity': cant }})
-			}else{ //new product
-
+				alert(cant);
+				Carts.remove(this.cl3._id);
+				Carts.insert({
+					'ip':this.aux.ip,
+					'name': this.aux.name,
+					'quantity': cant
+				});
+				/*Carts.update({'name': proName, 'ip': myip }, { $set : {'quantity': cant }});*/
+			}
+			else
+			{
+			 //new product
 			alert("new product");
 				Carts.insert({
 					'ip': myip,
@@ -97,4 +112,6 @@ export class HomeComponent {
 		}
 
 	}
+
+
 }

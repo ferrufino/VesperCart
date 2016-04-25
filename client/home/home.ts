@@ -24,18 +24,24 @@ export class HomeComponent {
     Tracker.autorun(() => zone.run(() => {
 		this.products = Products.find().fetch().slice(0,12);
 		}));
+
+
 	}
 
 	onSelectProduct(proNam){
-		if(!Session.get('selectedProduct'))
+	
+		if(!Session.get('sessionCart'))
 		{
-		Session.set('selectedProduct', proNam);
-		var selectedPlayer = Session.get('selectedProduct');
-		alert(selectedPlayer);
-		}
-		else
+			Session.set('sessionCart', myip);
+			var ip = Session.get('sessionCart');
+			alert("New session created");
+			alert(ip);
+		}else
 		{
-		alert("session already set");
+		  var temp = Session.get('sessionCart');
+		  alert("session already set");
+			alert(temp);
 		}
+
 	}
 }

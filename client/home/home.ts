@@ -40,7 +40,7 @@ export class HomeComponent {
 			var ip = Session.get('sessionCart');
 
 			alert(ip);
-
+			this.ans=0
 			for(var i=0; i<this.cartList.length;i++)
 			{
 				this.cl2 =this.cartList[i];
@@ -50,7 +50,6 @@ export class HomeComponent {
 					break;
 					//alert(this.cl3.name);
 				}
-				this.ans=0;
 			}
 
 			if(this.ans==0){

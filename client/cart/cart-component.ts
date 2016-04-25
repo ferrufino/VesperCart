@@ -33,5 +33,10 @@ export class CartComponent{
     this.sidenav.hide(name);
   }
 
+	removeParty(cartList) {
+
+			Carts.remove(cartList);
+  }
+
 
 }

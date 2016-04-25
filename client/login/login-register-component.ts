@@ -33,11 +33,7 @@ export class LoginRegisterComponent {
   ].map(function (state) {
     return {abbrev: state};
   })
-  loginAttempt(){
-    alert('attempted Login');
-    //Check if user is registered
-    //if not Login (Y)
-  }
+
 //Registration-----------------------------------------------------------------
 registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
     this.match=0;

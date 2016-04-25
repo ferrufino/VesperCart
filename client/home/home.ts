@@ -63,11 +63,20 @@ export class HomeComponent {
 
 				alert("New product added");
 			}else{
+
+				alert("product already exists");
+				this.aux = this.cl3;
+				alert(this.aux.quantity);
+				var cant = this.aux.quantity
+				alert(cant);
+				cant = cant+1;
+				alert(cant);
+				Carts.remove(this.cl3._id);
 				Carts.insert({
-					'ip': myip,
-					'name': proName,
-					'quantity': 1
-				})
+					'ip':this.aux.ip,
+					'name': this.aux.name,
+					'quantity': cant
+				});
 				alert("Should update product quantity");
 			}
 
@@ -103,7 +112,6 @@ export class HomeComponent {
 					'name': this.aux.name,
 					'quantity': cant
 				});
-				/*Carts.update({'name': proName, 'ip': myip }, { $set : {'quantity': cant }});*/
 			}
 			else
 			{

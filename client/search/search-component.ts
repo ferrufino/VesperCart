@@ -38,7 +38,7 @@ export class SearchComponent {
 
 
 	loadSearch(product){
-	//		alert(product)
+	//		alert(product);
 		for(var i=0; i<this.products.length;i++)
 		{	
 			this.product2=this.products[i];

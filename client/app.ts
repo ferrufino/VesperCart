@@ -50,14 +50,14 @@ class App {
 		{
 			Session.set('selectedProduct', myip);
 			var selectedPlayer = Session.get('selectedProduct');
-      alert("New session created");
-      alert(myip);
+      //alert("New session created");
+      //alert(myip);
 		}
 		else
 		{
 		  var temp = Session.get('selectedProduct');
-		  alert("session already set");
-			alert(temp);
+		  //alert("session already set");
+			//alert(temp);
 		}
 
 	}

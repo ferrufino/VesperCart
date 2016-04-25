@@ -35,8 +35,8 @@ export class HomeComponent {
 
 	onSelectProduct(proName){
 
+		if(!(Session.get('sessionCart')))
 
-		if(!Session.get('sessionCart'))
 		{
 			Session.set('sessionCart', myip);
 			var ip = Session.get('sessionCart');
@@ -46,7 +46,7 @@ export class HomeComponent {
 			for(var i=0; i<this.cartList.length;i++)
 			{
 				this.cl2 =this.cartList[i];
-				if(this.cl2.name == proName){
+				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
 					break;
@@ -61,7 +61,14 @@ export class HomeComponent {
 					'quantity': 1
 				})
 
-				alert("Product added");
+				alert("New product added");
+			}else{
+				Carts.insert({
+					'ip': myip,
+					'name': proName,
+					'quantity': 1
+				})
+				alert("Should update product quantity");
 			}
 
 		}
@@ -72,7 +79,7 @@ export class HomeComponent {
 			for(var i=0; i<this.cartList.length;i++)
 			{
 				this.cl2 =this.cartList[i];
-				if(this.cl2.name == proName){
+				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
 					break;
@@ -109,6 +116,8 @@ export class HomeComponent {
 				})
 			}
 
+		}else{
+			alert("algo anda mal");
 		}
 
 	}

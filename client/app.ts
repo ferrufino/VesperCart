@@ -41,7 +41,6 @@ class App {
 		this.categories = Categories.find().fetch();
 		}));
 	}
-
 }
 
 

@@ -64,7 +64,8 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
         'email':mail,
         'username': usernam,
         'password':password,
-        'phone':phone
+        'phone':phone,
+				'admin': 0
       })
       alert("user successfully created");
       Session.set('sessionRegister', usernam);
@@ -86,7 +87,7 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
     }
     if(this.matchL==1)
     {
-		
+
 				this._router.navigate( ['Checkout'] );
         alert("login");
         Session.set('UserLoginSession', user);

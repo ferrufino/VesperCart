@@ -39,7 +39,7 @@ export class CartComponent{
     this.sidenav.hide(name);
     var SessionSetReg = Session.get('sessionRegister');
     var SessionSetLog=Session.get('UserLoginSession');
-    if( SessionSetReg || SessionSetLog)
+    if( SessionSetReg!=" " || SessionSetLog!=" ")
     {
       this._router.navigate( ['Checkout'] );
     }

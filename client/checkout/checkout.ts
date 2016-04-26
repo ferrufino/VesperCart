@@ -7,7 +7,6 @@ import {Users} from '../../collections/users';
 import {Tracker} from 'meteor/tracker';
 import {RouterLink} from 'angular2/router';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
-import {Router} from 'angular2/router';
 
 @Component({
  selector: 'checkout-component',
@@ -19,7 +18,14 @@ import {Router} from 'angular2/router';
 })
 
 export class CheckoutComponent {
-construct(public router: Router){
- alert(this.router);
+construct(private _router: Router){
+ alert(this._router);
+}
+
+logOut(){
+	Session.set('UserLoginSession'," ");
+	Session.set('sessionRegister'," ");
+	alert("logout");
+
 }
 }

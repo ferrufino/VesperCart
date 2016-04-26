@@ -17,7 +17,7 @@
           </md-input-container>
         </div>
         <span class="login">
-        <button md-raised-button class="md-raised md-primary" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+        <button md-raised-button class="md-raised md-primary" type="submit" [disabled]="!loginForm.form.valid" >Login</button>
         </span>
         </fieldset>
       </form>
@@ -65,7 +65,7 @@
            </div>
           </md-input-container>
         </div>
-        
+
           <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Username</label>
@@ -79,7 +79,7 @@
           <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Phone Number</label>
-            <input md-input ngControl="postalCode" 
+            <input md-input ngControl="postalCode"
                    required mdPattern="^[0-9]{10}$" #phoneNum="ngForm" mdMaxLength="10">
             <div [md-messages]="phoneNum" role="alert">
             <div md-message="mdPattern">That doesn't look like a valid phone Number.</div>

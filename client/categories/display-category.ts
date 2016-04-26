@@ -34,6 +34,7 @@ export class DisplayCategory implements OnInit{
 		var categoryId = params.get('categoryId');
 		this.category = Categories.findOne(categoryId);
 		Tracker.autorun(() => zone.run(() => {
+	  	this.products = Products.find().fetch();
 		 this.cartList = Carts.find().fetch();
 		}));
 	}

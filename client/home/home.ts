@@ -40,8 +40,7 @@ export class HomeComponent {
 		{
 			Session.set('sessionCart', myip);
 			var ip = Session.get('sessionCart');
-
-			alert(ip);
+			//alert(ip);
 			this.ans=0
 			for(var i=0; i<this.cartList.length;i++)
 			{

@@ -15,6 +15,7 @@ import {SearchComponent} from './search/search-component';
 import {AdminComponent} from './admin/admin-component';
 import {CartComponent} from './cart/cart-component';
 import {LoginRegisterComponent} from './login/login-register-component';
+import {CheckoutComponent} from './checkout/checkout';
 
 @Component({
   selector: 'app',
@@ -29,7 +30,8 @@ import {LoginRegisterComponent} from './login/login-register-component';
 	{path: '/home/category/:categoryId', as: 'Category', component: DisplayCategory },
 	{path: '/home/search/:searchInput', as: 'Search', component: SearchComponent},
 	{path: '/home/admin', as: 'Admin', component: AdminComponent},
-	{path: '/home/login', as: 'LoginRegister', component: LoginRegisterComponent}
+	{path: '/home/login', as: 'LoginRegister', component: LoginRegisterComponent},
+  {path: '/home/checkout', as: 'Checkout', component: CheckoutComponent}
 ])
 
 class App {
@@ -38,7 +40,7 @@ class App {
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
-		this.categories = Categories.find().fetch();
+		  this.categories = Categories.find().fetch();
 		}));
 	}
 }

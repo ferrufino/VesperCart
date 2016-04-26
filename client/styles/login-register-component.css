@@ -46,7 +46,6 @@ md-input-container > select {
   padding-right: 15px;
   margin-top: 25px;
   margin-bottom: 25px;
-  border-right: 1px solid black;
   height: 650px;
   text-align: center;
 }
@@ -58,7 +57,6 @@ md-input-container > select {
   margin-top: 25px;
   margin-bottom: 25px;*/
   float: right;
-  border-left: 1px solid black;
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 25px;
@@ -79,4 +77,3 @@ form div.input{
     width: 60%;
     padding: 10px;
 }
-

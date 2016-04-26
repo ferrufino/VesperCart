@@ -5,6 +5,7 @@ import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators} from "angular2/common";
 import {Users} from '../../collections/users.ts';
 import {Tracker} from 'meteor/tracker';
+import {Router} from 'angular2/router';
 
 
 
@@ -21,10 +22,11 @@ export class LoginRegisterComponent {
   match: number;
   matchL: number;
 
-  constructor(zone: NgZone){
+  constructor( private _router: Router, zone: NgZone){
   Tracker.autorun(() => zone.run(() => {
     this.users = Users.find().fetch();
     }));
+
   }
 
   states = [
@@ -33,6 +35,8 @@ export class LoginRegisterComponent {
   ].map(function (state) {
     return {abbrev: state};
   })
+
+
 
 //Registration-----------------------------------------------------------------
 registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
@@ -66,7 +70,6 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
       this.match=0;
     }
   }
-//Registration-----------------------------------------------------------------
 //Login------------------------------------------------------------------------
   loginAttempt(user,password){
     this.matchLogin=0;
@@ -80,20 +83,12 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
     }
     if(this.matchL==1)
     {
-      alert("welcome " + this.user.firstname);
+				//falta crear session
+				this._router.navigate( ['Checkout'] );
     }
     else
     {
-      alert("login error");
+      alert("login username or password are wrong");
     }
   }
 }
-
-
-
-
-
-
-
-
-

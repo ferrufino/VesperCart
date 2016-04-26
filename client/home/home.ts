@@ -6,8 +6,7 @@ import {Carts} from '../../collections/carts';
 import {Tracker} from 'meteor/tracker';
 import {RouterLink} from 'angular2/router';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
-
-
+import {CartComponent} from '../cart/cart-component.ts';
 
 @Component({
 	selector: 'home-component',
@@ -15,7 +14,8 @@ import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 	styleUrls: ['/client/styles/home.css'],
 	directives: [
 		RouterLink
-		]
+		],
+		providers:[CartComponent]
 })
 
 export class HomeComponent {
@@ -26,7 +26,7 @@ export class HomeComponent {
 	ans: Object;
 	aux: Object;
 
-	constructor (zone: NgZone) {
+	constructor (zone: NgZone, private openNav: CartComponent) {
     Tracker.autorun(() => zone.run(() => {
 		 this.products = Products.find().fetch().slice(0,12);
 		 this.cartList = Carts.find().fetch();
@@ -77,6 +77,7 @@ export class HomeComponent {
 					'quantity': cant
 				});
 				//alert("Should update product quantity");
+					this.openNav.openS();
 			}
 
 		}
@@ -111,6 +112,7 @@ export class HomeComponent {
 					'name': this.aux.name,
 					'quantity': cant
 				});
+				this.openNav.openS();
 			}
 			else
 			{
@@ -122,9 +124,8 @@ export class HomeComponent {
 					'quantity': 1
 				})
 			}
-
 		}else{
-			alert("Woops! Seems something went wrong! (Blame Luis)");
+			alert("Woops! Seems something went wrong! (Blame Gustavo)");
 		}
 
 	}

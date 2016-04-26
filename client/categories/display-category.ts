@@ -52,7 +52,7 @@ export class DisplayCategory implements OnInit{
 			Session.set('sessionCart', myip);
 			var ip = Session.get('sessionCart');
 
-			alert(ip);
+			//alert(ip);
 			this.ans=0
 			for(var i=0; i<this.cartList.length;i++)
 			{
@@ -72,49 +72,47 @@ export class DisplayCategory implements OnInit{
 					'quantity': 1
 				})
 
-				alert("New product added");
+				//alert("New product added");
 			}else{
 				this.aux = this.cl3;
-				alert(this.aux.quantity);
+				//alert(this.aux.quantity);
 				var cant = this.aux.quantity
-				alert(cant);
+				//alert(cant);
 				cant = cant+1;
-				alert(cant);
+				//alert(cant);
 				Carts.remove(this.cl3._id);
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
 					'quantity': cant
 				});
-				alert("Should update product quantity");
 			}
 
 		}
 		else if(Session.get('sessionCart') == myip)
 		{
-			alert("session already set");
+			//alert("session already set");
 			this.ans=0;
 			for (var x=0; x<this.cartList.length;x++){
 				this.cl2 =this.cartList[x];
-				alert(this.cl2.name);
+				//alert(this.cl2.name);
 				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
-					alert("perro");
 					break;
 					//alert(this.cl3.name);
-				}  
+				}
 			}
-			
+
 			if(this.ans==1){
 
-				alert("product already exists");
+				//alert("product already exists");
 				this.aux = this.cl3;
-				alert(this.aux.quantity);
+				//alert(this.aux.quantity);
 				var cant = this.aux.quantity
-				alert(cant);
+				//alert(cant);
 				cant = cant+1;
-				alert(cant);
+				//alert(cant);
 				Carts.remove(this.cl3._id);
 				Carts.insert({
 					'ip':this.aux.ip,
@@ -126,7 +124,7 @@ export class DisplayCategory implements OnInit{
 			else
 			{
 			 //new product
-			alert("new product");
+			//alert("new product");
 				Carts.insert({
 					'ip': myip,
 					'name': proName,
@@ -135,7 +133,7 @@ export class DisplayCategory implements OnInit{
 			}
 
 		}else{
-			alert("algo anda mal");
+			alert("Woops! Seems something went wrong! (Blame Luis)");
 		}
 
 	}

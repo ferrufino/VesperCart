@@ -4,8 +4,8 @@
         <a ui-sref="parties"><span class="md-title"[routerLink]="['Home']">Vesper Cart</span></a>
     </h2>
 
-    <div style="margin-left: 100px;width:200px;height: 50px;">
-        <input type="text" #searchInput (keyup)="0" style="width: 150px;">
+    <div id="searchbox">
+        <input type="text" #searchInput (keyup)="0" id="searchRealBox">
         <i [routerLink]="['/Search',{searchInput: searchInput.value}]"  class="material-icons sear">search</i>
     </div>
 

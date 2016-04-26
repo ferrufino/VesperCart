@@ -21,6 +21,7 @@ export class LoginRegisterComponent {
   user: Object;
   match: number;
   matchL: number;
+  user2: Object;
 
   constructor( private _router: Router, zone: NgZone){
   Tracker.autorun(() => zone.run(() => {
@@ -64,7 +65,8 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
         'email':mail,
         'username': usernam,
         'password':password,
-        'phone':phone
+        'phone':phone,
+        'admin':0
       })
       alert("user successfully created");
       Session.set('sessionRegister', usernam);
@@ -82,6 +84,7 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
       if((this.user.username == user) && (this.user.password == password))
       {
         this.matchL=1;
+        this.user2=this.users[i];
       }
     }
     if(this.matchL==1)
@@ -90,6 +93,7 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
 				this._router.navigate( ['Checkout'] );
         alert("login");
         Session.set('UserLoginSession', user);
+        Session.set('admin',this.user2.admin);
         var usern = Session.get('UserLoginSession');
         alert (usern);
     }

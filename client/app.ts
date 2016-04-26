@@ -37,10 +37,20 @@ import {CheckoutComponent} from './checkout/checkout';
 class App {
 	categories: Array<Object>;
 	search = null;
+	admin: Object;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
 		  this.categories = Categories.find().fetch();
+
+		  if(Session.get('admin')==1)
+		  {
+		  	this.admin=1;
+		  }
+		  else
+		  {
+		  	this.admin=0;
+		  }
 		}));
 	}
 }

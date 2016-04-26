@@ -25,6 +25,7 @@ construct(private _router: Router){
 logOut(){
 	Session.set('UserLoginSession'," ");
 	Session.set('sessionRegister'," ");
+	Session.set('admin'," ");
 	alert("logout");
 
 }

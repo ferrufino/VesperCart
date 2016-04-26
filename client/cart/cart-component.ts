@@ -24,6 +24,8 @@ export class CartComponent{
               public media: Media, zone: NgZone, private _router: Router) {
 			Tracker.autorun(() => zone.run(() => {
 				this.cartList = Carts.find({'ip':myip}).fetch();
+
+       
 			}));
   }
   hasMedia(breakSize: string): boolean {

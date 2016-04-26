@@ -24,13 +24,22 @@ export class CartComponent{
               public media: Media, zone: NgZone, private _router: Router) {
 			Tracker.autorun(() => zone.run(() => {
 				this.cartList = Carts.find({'ip':myip}).fetch();
+
+				if(Carts.find({'ip':myip}).count() == 1){
+          this.open('right');
+        }
 			}));
+
   }
   hasMedia(breakSize: string): boolean {
     return this.media.hasMedia(breakSize);
   }
-  open(name: string) {
+	open(name: string) {
     this.sidenav.show(name);
+  }
+ openS() {
+    this.sidenav.show('right');
+		//alert("yes");
   }
   close(name: string) {
     this.sidenav.hide(name);

@@ -1,3 +1,8 @@
 #cart{
 	z-index: 10;
 }
+
+.rowTable{
+	height: auto;
+	height: 10px;
+}

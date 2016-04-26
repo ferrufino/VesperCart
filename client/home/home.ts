@@ -61,29 +61,29 @@ export class HomeComponent {
 					'quantity': 1
 				})
 
-				alert("New product added");
+				//alert("New product added");
 			}else{
 
-				alert("product already exists");
+				//alert("product already exists");
 				this.aux = this.cl3;
-				alert(this.aux.quantity);
+				//alert(this.aux.quantity);
 				var cant = this.aux.quantity
-				alert(cant);
+				//alert(cant);
 				cant = cant+1;
-				alert(cant);
+				//alert(cant);
 				Carts.remove(this.cl3._id);
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
 					'quantity': cant
 				});
-				alert("Should update product quantity");
+				//alert("Should update product quantity");
 			}
 
 		}
 		else if(Session.get('sessionCart') == myip)
 		{
-			alert("session already set");
+			//alert("session already set");
 
 			for(var i=0; i<this.cartList.length;i++)
 			{
@@ -99,13 +99,13 @@ export class HomeComponent {
 
 			if(this.ans==1){
 
-				alert("product already exists");
+				//alert("product already exists");
 				this.aux = this.cl3;
-				alert(this.aux.quantity);
+				//alert(this.aux.quantity);
 				var cant = this.aux.quantity
-				alert(cant);
+				//alert(cant);
 				cant = cant+1;
-				alert(cant);
+				//alert(cant);
 				Carts.remove(this.cl3._id);
 				Carts.insert({
 					'ip':this.aux.ip,
@@ -116,7 +116,7 @@ export class HomeComponent {
 			else
 			{
 			 //new product
-			alert("new product");
+			//alert("new product");
 				Carts.insert({
 					'ip': myip,
 					'name': proName,
@@ -125,7 +125,7 @@ export class HomeComponent {
 			}
 
 		}else{
-			alert("algo anda mal");
+			alert("Woops! Seems something went wrong! (Blame Luis)");
 		}
 
 	}

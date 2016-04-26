@@ -5,13 +5,15 @@ import {MATERIAL_DIRECTIVES, Media, SidenavService} from "ng2-material/all";
 import {RouterLink} from 'angular2/router';
 import {Carts} from '../../collections/carts';
 import {Tracker} from 'meteor/tracker';
+import {OrderByPipe} from '../orderby';
 
 @Component({
 	selector: 'cart-component',
 	templateUrl: 'client/cart/cart-component.html',
 	styleUrls:['/client/styles/cart-component.css'],
 	directives:[MATERIAL_DIRECTIVES, RouterLink],
-	providers:[SidenavService]
+	providers:[SidenavService],
+  pipes: [ OrderByPipe ]
 })
 
 export class CartComponent{

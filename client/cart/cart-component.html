@@ -11,27 +11,35 @@
       <md-toolbar class="md-theme-light">
         <h1 class="md-toolbar-tools">Cart</h1>
       </md-toolbar>
-      <md-content layout-padding>
-        <ul *ngFor="#product of cartList">
-          <li style="text-align: left;">
-              {{product.name}}
-              {{product.quantity}}
-              <button (click)="removeParty(product._id)">X</button>
-          </li>
-          <br/>
-        </ul>
-        <div style="margin-top:2em;">
-          <span style="float:left;">
-            <button md-raised-button (click)="close('right')" class="md-primary">
-              Close Cart
-            </button>
-          </span>
-          <span>
-            <button md-raised-button class="md-primary" [routerLink]="['/LoginRegister']"  (click)="close('right')">
-             Check out
-           </button>
-          </span>
-        </div>
-      </md-content>
+      <div>
+        <md-data-table layout-fill>
+          <thead>
+          <tr>
+            <th class="md-text-cell">Material</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="#product of cartList | orderby:'name'" style="height: auto;height:10px;">
+          <td class="md-text-cell">{{product.name}}</td>
+          <td>{{product.quantity}}</td>
+          <td><button md-fab class="md-mini md-primary" (click)="removeParty(product._id)">x</button></td>
+        </tr>
+        </tbody>
+        </md-data-table>
+      </div>
+      <div style="margin-top:2em;">
+        <span style="float:left;">
+          <button md-raised-button (click)="close('right')" class="md-primary">
+            Close Cart
+          </button>
+        </span>
+        <span>
+          <button md-raised-button class="md-primary" [routerLink]="['/LoginRegister']"  (click)="close('right')">
+           Check out
+         </button>
+        </span>
+      </div>
     </md-sidenav>
 </div>

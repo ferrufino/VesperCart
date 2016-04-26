@@ -67,6 +67,9 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
         'phone':phone
       })
       alert("user successfully created");
+      Session.set('sessionRegister', usernam);
+      var register = Session.get('sessionRegister');
+      alert(register);
       this.match=0;
     }
   }
@@ -85,6 +88,10 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
     {
 				//falta crear session
 				this._router.navigate( ['Checkout'] );
+        alert("login");
+        Session.set('UserLoginSession', user);
+        var usern = Session.get('UserLoginSession');
+        alert (usern);
     }
     else
     {

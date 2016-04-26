@@ -6,6 +6,7 @@ import {RouterLink} from 'angular2/router';
 import {Carts} from '../../collections/carts';
 import {Tracker} from 'meteor/tracker';
 import {OrderByPipe} from '../orderby';
+import {Router} from 'angular2/router';
 
 @Component({
 	selector: 'cart-component',
@@ -20,7 +21,7 @@ export class CartComponent{
 	cartList: Array<Object>;
 
 	constructor(public sidenav: SidenavService,
-              public media: Media, zone: NgZone) {
+              public media: Media, zone: NgZone, private _router: Router) {
 			Tracker.autorun(() => zone.run(() => {
 				this.cartList = Carts.find({'ip':myip}).fetch();
 			}));
@@ -33,6 +34,19 @@ export class CartComponent{
   }
   close(name: string) {
     this.sidenav.hide(name);
+  }
+  routecheckout(name: string){
+    this.sidenav.hide(name);
+    var SessionSetReg = Session.get('sessionRegister');
+    var SessionSetLog=Session.get('UserLoginSession');
+    if( SessionSetReg || SessionSetLog)
+    {
+      this._router.navigate( ['Checkout'] );
+    }
+    else
+    {
+      this._router.navigate(['LoginRegister']);
+    }
   }
 
 	removeParty(cartList) {

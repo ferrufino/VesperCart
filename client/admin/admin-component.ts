@@ -5,6 +5,7 @@ import {Products} from '../../collections/products';
 import {Tracker} from 'meteor/tracker';
 import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators, Control} from 'angular2/common';
+import {Categories} from '../../collections/categories.ts';
 
 @Component({
 	selector: 'admin-component',
@@ -19,11 +20,14 @@ export class AdminComponent {
 	insertedProd: Object;
 	aux: Object;
 	exists:number;
+	categoryID:string;
+	categories: Array<Object>;
 
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
 		this.products = Products.find().fetch();
 		}));
+		this.categories = Categories.find().fetch();
 	}
 	states = [
 		'Fruits & Vegetables', 'Pantry', 'Frozen', 'Meat & Fish', 'Wine & Alcohol', 'Drinks'
@@ -64,9 +68,17 @@ export class AdminComponent {
 			}
 		}
 		if(!this.exists){
+
+		 for(var i=0;i<this.categories.length;i++)
+			 {
+			 	if(this.categories[i].name==category){
+			 		this.categoryID=this.categories[i].id;
+			 	}
+			 }
+
 			Products.insert({
 				"name":product,
-				"category":category,
+				"category":this.categoryID,
 				"description":description,
 				"quantity":quantity,
 				"storeName":store

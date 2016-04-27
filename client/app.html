@@ -10,9 +10,7 @@
     </div>
 
         <div id = "searchcomponent"></div>
-        <span *ngIf="admin==1">
-        <button [routerLink]="['Admin']">Admin</button>
-        </span>
+
         <span id="Cart">
             <cart-component></cart-component>
         </span>
@@ -21,6 +19,7 @@
     <div class="categories">
         <ul id="menu">
             <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
+            <li *ngIf="admin==1" [routerLink]="['Admin']" class="display" style="float: right;"><a>Admin</a></li>
         </ul>
     </div>
     <router-outlet></router-outlet>

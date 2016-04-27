@@ -1,8 +1,78 @@
 <div class="fondo">
 <div id="relleno"></div>
+<div id="fromHolder">
 <h4>Billing Information</h4>
-
+      <form name="userForm" #BillingForm="ngForm">
+        <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>First Name</label>
+            <input md-input required  [(value)]="temp.firstname"
+            >
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+            <input md-input [(value)]="temp.lastname">
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+         <md-input-container class="md-block" flex-gt-sm>
+            <label>Billing Address</label>
+            <input md-input required  ngControl="address">
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+         <md-input-container class="md-block" flex-gt-sm>
+            <label>Card Number</label>
+            <input md-input required ngControl="cardN" mdPattern="^[0-9]{16}$" #card="ngForm">
+            <div [md-messages]="card" role="alert">
+            <div md-message="mdPattern">Card Number must  16 digits.</div></div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Security Code</label>
+            <input md-input ngControl="cardCode" required mdPattern="^[0-9]{3}$" type="password" #securityCode="ngForm">
+            <div [md-messages]="securityCode" role="alert">
+            <div md-message="mdPattern">Security Code must be 3 Numbers.</div></div>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+         <md-input-container class="md-block" flex-gt-sm>
+            <label>Email</label>
+            <input md-input  type="email" [(value)]="temp.email">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Phone</label>
+            <input md-input  type="email" ngControl="phone" required>
+          </md-input-container>
+        </div>
+       </form>
+       </div>
+<div id="relleno"></div>
+<h4 id="user">{{temp.firstname}}'s Cart</h4>
+      <div>
+        <md-data-table layout-fill>
+          <thead>
+          <tr>
+            <th class="md-text-cell">Product</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="#product of cartList | orderby:'name'" style="height: auto;height:10px;">
+          <td class="md-text-cell">{{product.name}}</td>
+          <td>{{product.quantity}}</td>
+          <td><button md-fab class="md-mini md-primary" (click)="removeParty(product._id)">x</button></td>
+          <td>{{product.price}}</td>
+        </tr>
+        </tbody>
+        </md-data-table>
+      </div>
 <button md-raised-button (click)="logOut()" [routerLink]="['Home']" class="md-primary">
             Logout
 </button>
+<button md-raised-button (click)="confirmOrder()" class="md-primary" [disabled]="!BillingForm.form.valid">
+            Confirm
+</button>
+
 </div>

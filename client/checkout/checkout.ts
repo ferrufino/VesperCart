@@ -11,7 +11,7 @@ import {FORM_DIRECTIVES} from "angular2/common";
 import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 import {Carts} from '../../collections/carts';
 import {OrderByPipe} from '../orderby';
-
+import {Billing} from '../../collections/billing';
 
 
 
@@ -56,10 +56,48 @@ export class CheckoutComponent {
 
 			Carts.remove(cartList);
   }
-  confirmOrder(){
+  confirmOrder(address,card,sec,pho){
   //pasar el cart a la coleccion billing
   //y datos del usuario
   //y # de orden
-  	alert("Congrats!");
+  //alert(address);
+ 	//alert(card);
+ //	alert(sec);
+ 	//alert(pho);
+ 	var products ={
+ 		product:[]
+ 	};
+	var productsArray ={
+ 		product:[]
+ 	};
+
+  	for(var i=0;i<this.cartList.length;i++)
+  	{
+
+  		var product =this.cartList[i];
+
+  		productsArray.product.push({
+  		'productName': product.name,
+  		'ip': product.ip,
+  		'quantity':product.quantity
+  		});
+
+  		//alert(this.cartList[i]._id);
+  		Carts.remove(this.cartList[i]._id);
+  	}
+
+ 
+  	Billing.insert({
+        'firstname': this.temp.firstname,
+        'lastname': this.temp.lastname,
+        'userID': this.temp._id,
+        'address': address,
+        'cardNum': card,
+        'securityNum':sec,
+        'email': this.temp.email,
+        'phone': pho,
+        'products': productsArray
+      })
+      alert("Your order has been sent, you will be receiving your groceries soon :)");
   }
 }

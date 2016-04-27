@@ -17,7 +17,7 @@
         <div layout-gt-sm="row">
          <md-input-container class="md-block" flex-gt-sm>
             <label>Billing Address</label>
-            <input md-input required  ngControl="address">
+            <input md-input required  ngControl="address" #ADR>
           </md-input-container>
         </div>
         <div layout-gt-sm="row">
@@ -41,7 +41,7 @@
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm>
             <label>Phone</label>
-            <input md-input  type="email" ngControl="phone" required>
+            <input md-input #PHO type="email" ngControl="phone" required>
           </md-input-container>
         </div>
        </form>
@@ -68,10 +68,7 @@
         </tbody>
         </md-data-table>
       </div>
-<button md-raised-button (click)="logOut()" [routerLink]="['Home']" class="md-primary">
-            Logout
-</button>
-<button md-raised-button (click)="confirmOrder()" class="md-primary" [disabled]="!BillingForm.form.valid">
+<button md-raised-button (click)="confirmOrder(ADR.value,card.value,securityCode.value,PHO.value)" class="md-primary" [disabled]="!BillingForm.form.valid" [routerLink]="['Home']">
             Confirm
 </button>
 

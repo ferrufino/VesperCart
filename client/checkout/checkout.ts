@@ -7,7 +7,6 @@ import {Users} from '../../collections/users';
 import {Tracker} from 'meteor/tracker';
 import {RouterLink} from 'angular2/router';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
-import {LoginRegisterComponent} from '../login/login-register-component';
 
 @Component({
  selector: 'checkout-component',
@@ -27,14 +26,7 @@ export class CheckoutComponent {
 	 	this.getUser();
 	}
 
-	
-	logOut(){
-		Session.set('UserLoginSession'," ");
-		Session.set('sessionRegister'," ");
-		Session.set('admin'," ");
-		alert("logout");
 
-	}
 
 	getUser(){
 

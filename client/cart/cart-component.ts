@@ -49,14 +49,16 @@ export class CartComponent{
     this.sidenav.hide(name);
     var SessionSetReg = Session.get('sessionRegister');
     var SessionSetLog=Session.get('UserLoginSession');
-    if( SessionSetReg!=" " || SessionSetLog!=" ")
-    {
-      this._router.navigate( ['Checkout'] );
-    }
-    else
-    {
-      this._router.navigate(['LoginRegister']);
-    }
+		if(Carts.find({'ip':myip}).count() >= 1){
+			if( (SessionSetReg!=" " || SessionSetLog!=" "))
+			{
+				this._router.navigate( ['Checkout'] );
+			}
+			else
+			{
+				this._router.navigate(['LoginRegister']);
+			}
+		}
   }
 
 	removeParty(cartList) {

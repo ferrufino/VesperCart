@@ -66,7 +66,7 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
         'username': usernam,
         'password':password,
         'phone':phone,
-        'admin':0
+        'admin': 0
       })
       alert("user successfully created");
       Session.set('sessionRegister', usernam);

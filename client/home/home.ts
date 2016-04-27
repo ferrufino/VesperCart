@@ -125,7 +125,7 @@ export class HomeComponent {
 				})
 			}
 		}else{
-			alert("Woops! Seems something went wrong! (Blame Gustavo)");
+			alert("Woops! Seems something went wrong!");
 		}
 
 	}

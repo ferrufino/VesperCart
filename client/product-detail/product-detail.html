@@ -11,11 +11,9 @@
         </md-card-title-media>
       </md-card-title>
       <md-card-actions layout="row" layout-align="end center">
-        <button md-fab class="md-fab" aria-label="Eat cake"><i class="material-icons">add</i></button>
+        <button md-fab class="md-fab" aria-label="Eat cake"><i class="material-icons" (click)="onSelectProduct(product.name)">add</i></button>
         <button md-raised-button class="md-raised"[routerLink]="['/Home']">Back</button>
       </md-card-actions>
     </md-card>
 	</div>
 </div>
-
-

@@ -7,11 +7,13 @@ import {Users} from '../../collections/users';
 import {Tracker} from 'meteor/tracker';
 import {RouterLink} from 'angular2/router';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
+<<<<<<< HEAD
 import {LoginRegisterComponent} from '../login/login-register-component';
 import {FORM_DIRECTIVES} from "angular2/common";
 import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 import {Carts} from '../../collections/carts';
 import {OrderByPipe} from '../orderby';
+
 
 
 
@@ -39,14 +41,7 @@ export class CheckoutComponent {
 			}));
 	}
 
-	
-	logOut(){
-		Session.set('UserLoginSession'," ");
-		Session.set('sessionRegister'," ");
-		Session.set('admin'," ");
-		alert("logout");
 
-	}
 
 	getUser(){
 

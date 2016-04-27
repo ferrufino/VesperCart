@@ -67,7 +67,7 @@ h4 {
 @media (max-width: 600px) {
     .module {
       font-size: 10px;
-      max-height: 75px; }
+      max-height: 150px; }
 }
 @media (max-width: 1024px) {
     .grid {
@@ -82,4 +82,8 @@ h4 {
 }
 .fondo{
 background-color: #f7f7f7;
+}
+
+#name{
+
 }

@@ -38,10 +38,15 @@ class App {
 	categories: Array<Object>;
 	search = null;
 	admin: Object;
-
+  logged: Object;
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
 		  this.categories = Categories.find().fetch();
+      if(Session.get('UserLoginSession') != " "){
+        this.logged = 1;
+      }else{
+        this.logged = 0;
+      }
 
 		  if(Session.get('admin')==1)
 		  {
@@ -53,6 +58,15 @@ class App {
 		  }
 		}));
 	}
+
+  logOut(){
+    Session.set('UserLoginSession'," ");
+    Session.set('sessionRegister'," ");
+    Session.set('admin'," ");
+    alert("logout");
+
+  }
+
 }
 
 

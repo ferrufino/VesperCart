@@ -1,27 +1,27 @@
 <div class="fondo">
 <div id="relleno"></div>
 <div id="backgroundInfo" class="grid grid-pad">
-         <form name="userForm" #ngForm="ngForm">
+         <form name="userForm" #ngForm="ngForm"(ngSubmit)="UpdateProfile(first.value,last.value,address.value,card.value,securityCode.value,email.value,phoneNum.value)">
        <fieldset>
        <legend>Profile Info</legend>
        <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>First name</label>
-            <input md-input [(value)]="temp.firstname">
+            <input md-input [(value)]="temp.firstname" #first>
           </md-input-container>
           <md-input-container class="md-block" flex-gt-sm>
             <label>Last Name</label>
-            <input md-input [(value)]="temp.lastname" required >
+            <input md-input [(value)]="temp.lastname" required #last>
           </md-input-container>
         </div>
          <md-input-container class="md-block">
           <label>Address</label>
-          <input md-input [(value)]="temp.address">
+          <input md-input [(value)]="temp.address" #address>
         </md-input-container>
          <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Card Number</label>
-            <input md-input ngControl="cardNum" required #card>
+            <input md-input [(value)]="temp.cardNum" #card>
           </md-input-container>
         </div>
         <div layout-gt-sm="row">

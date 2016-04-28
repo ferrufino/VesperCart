@@ -46,6 +46,7 @@ export class CheckoutComponent {
 		for(var i=0; i<this.user.length; i++){
 			this.temp = this.user[i];
 			if(this.temp.username == Session.get('UserLoginSession')){
+        break;
 				alert(this.temp.username);
 			}
 

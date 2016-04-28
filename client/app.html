@@ -21,6 +21,7 @@
             <li *ngFor="#category of categories" class="display" [routerLink]="['/Category',{categoryId: category._id}]"><a>{{category.name}}</a></li>
             <li *ngIf="admin==1" [routerLink]="['Admin']" class="display" style="float: right;"><a>Admin</a></li>
             <li *ngIf="logged==1" (click)="logOut()" [routerLink]="['Home']" class="display" style="float: right;"><a>Logout</a></li>
+            <li *ngIf="logged==1" [routerLink]="['Profile']" class="display" style="float: right;"><a>Profile</a></li>
         </ul>
     </div>
     <router-outlet></router-outlet>

@@ -16,6 +16,7 @@ import {AdminComponent} from './admin/admin-component';
 import {CartComponent} from './cart/cart-component';
 import {LoginRegisterComponent} from './login/login-register-component';
 import {CheckoutComponent} from './checkout/checkout';
+import {ProfileComponent} from './profile/profile-component';
 
 @Component({
   selector: 'app',
@@ -31,7 +32,8 @@ import {CheckoutComponent} from './checkout/checkout';
 	{path: '/home/search/:searchInput', as: 'Search', component: SearchComponent},
 	{path: '/home/admin', as: 'Admin', component: AdminComponent},
 	{path: '/home/login', as: 'LoginRegister', component: LoginRegisterComponent},
-  {path: '/home/checkout', as: 'Checkout', component: CheckoutComponent}
+  {path: '/home/checkout', as: 'Checkout', component: CheckoutComponent},
+  {path:'/home/profile', as:'Profile',component: ProfileComponent}
 ])
 
 class App {
@@ -42,7 +44,7 @@ class App {
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
 		  this.categories = Categories.find().fetch();
-      if(Session.get('UserLoginSession') != " "){
+      if(Session.get('UserLoginSession') != " " || Session.get('sessionRegister')){
         this.logged = 1;
       }else{
         this.logged = 0;

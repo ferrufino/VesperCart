@@ -19,7 +19,7 @@ md-input-container > select {
 #relleno{
 	  padding-top: 20px;
 }
-.fondo div#background{
+.fondo div#background8{
   background-color: white;
   color: black;
   border-radius: 3px;
@@ -27,8 +27,8 @@ md-input-container > select {
   margin: 1em;
   position: relative !important;
   padding-bottom: 10px;
-  max-height: 800px;
-  height:800px;
+  max-height: 900px;
+  height:850px;
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

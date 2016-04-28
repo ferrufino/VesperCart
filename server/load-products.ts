@@ -11,6 +11,7 @@ export function loadProducts() {
                 'quantity': 5,
                 'img': '',
                 'category': 4,
+                'price': 120,
                 'storeName': 'Soriana'
             },
             {
@@ -20,6 +21,7 @@ export function loadProducts() {
                 'quantity': 100,
                 'img': '',
                 'category': 1,
+                'price': 25,
                 'storeName': 'HiperMaxi'
             },
             {
@@ -29,6 +31,7 @@ export function loadProducts() {
                 'quantity': '12',
                 'img': '',
                 'category': 2,
+                'price': 16,
                 'storeName': 'Walmart'
             }
             ,
@@ -39,6 +42,7 @@ export function loadProducts() {
                 'quantity': 6,
                 'img': '',
                 'category': 3,
+                'price': 32,
                 'storeName': 'HEB'
             },
             {
@@ -48,6 +52,7 @@ export function loadProducts() {
                 'quantity': 54,
                 'img': '',
                 'category': 5,
+                'price': 85,
                 'storeName': 'COTSCO'
             }
             ,
@@ -58,6 +63,7 @@ export function loadProducts() {
                 'quantity': 32,
                 'img': '',
                 'category': 5,
+                'price': 100,
                 'storeName': 'ALDI'
             },
             {
@@ -67,6 +73,7 @@ export function loadProducts() {
                 'quantity': 7,
                 'img': '',
                 'category': 6,
+                'price': 25,
                 'storeName': 'Soriana'
             }
             ,
@@ -77,6 +84,7 @@ export function loadProducts() {
                 'quantity': 12,
                 'img': '',
                 'category': 6,
+                'price': 12,
                 'storeName': 'HEB'
             },
             {
@@ -86,6 +94,7 @@ export function loadProducts() {
                 'quantity': 40,
                 'img': '',
                 'category': 1,
+                'price': 5.5,
                 'storeName': 'Sainsburry'
             }
         ];

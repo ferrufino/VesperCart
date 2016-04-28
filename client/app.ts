@@ -44,7 +44,7 @@ class App {
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
 		  this.categories = Categories.find().fetch();
-      if(Session.get('UserLoginSession') != " " || Session.get('sessionRegister')){
+      if(Session.get('UserLoginSession') != " " || Session.get('sessionRegister')!= " " ){
         this.logged = 1;
       }else{
         this.logged = 0;

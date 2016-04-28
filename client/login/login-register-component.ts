@@ -73,6 +73,8 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
       var register = Session.get('sessionRegister');
       alert(register);
       this.match=0;
+      this._router.navigate( ['Checkout'] );
+
     }
   }
 //Login------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 #relleno{
 	  padding-top: 20px;
 }
-.fondo div#background{
+.fondo div#backgroundInfo{
   background-color: white;
   color: black;
   border-radius: 3px;
@@ -9,8 +9,8 @@
   margin: 1em;
   position: relative !important;
   padding-bottom: 10px;
-  max-height: 800px;
-  height:600px;
+  max-height: 900px;
+  height:750px;
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

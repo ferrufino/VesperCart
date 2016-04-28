@@ -1,6 +1,65 @@
 <div class="fondo">
 <div id="relleno"></div>
-<div id="background" class="grid grid-pad">
+<div id="backgroundInfo" class="grid grid-pad">
+         <form name="userForm" #ngForm="ngForm">
+       <fieldset>
+       <legend>Profile Info</legend>
+       <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>First name</label>
+            <input md-input [(value)]="temp.firstname">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+            <input md-input [(value)]="temp.lastname" required >
+          </md-input-container>
+        </div>
+         <md-input-container class="md-block">
+          <label>Address</label>
+          <input md-input ngControl="Address" required #address>
+        </md-input-container>
+         <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Card Number</label>
+            <input md-input ngControl="cardNum" required #card>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+             <md-input-container class="md-block" flex-gt-sm>
+            <label>Security Code</label>
+            <input required md-input ngControl="securityCode" mdPattern="^[0-9]{3}$" mdMaxLength="3" #securityCode="ngForm">
+            <div [md-messages]="securityCode" role="alert">
+            <div md-message="mdPattern">That doesn't look like a valid security Code.</div>
+             <div md-message="required">You must supply a Security Code.</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+         <md-input-container class="md-block" flex-gt-sm>
+            <label>email</label>
+            <input required md-input ngControl="email" mdPattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #email="ngForm" >
+           <div [md-messages]="email" role="alert">
+             <div md-message="mdPattern">That doesn't look like a valid mail.</div>
+           </div>
+          </md-input-container>
+        </div>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Phone Number</label>
+            <input md-input ngControl="postalCode"
+                   required mdPattern="^[0-9]{10}$" #phoneNum="ngForm" mdMaxLength="10">
+            <div [md-messages]="phoneNum" role="alert">
+            <div md-message="mdPattern">That doesn't look like a valid phone Number.</div>
+             <div md-message="required">You must supply a Phone Number.</div>
+            </div>
+          </md-input-container>
+        </div>
+        <span class="login">
+        <button md-raised-button class="md-raised md-primary" type="submit" [disabled]="!ngForm.form.valid" >Edit Info</button>
+        </span>
+        </fieldset>
+      </form>
+
 
 </div>
 </div>

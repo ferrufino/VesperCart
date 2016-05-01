@@ -21,6 +21,8 @@ export class SearchComponent {
 
 
 	searchValue: string;
+
+
 	products: Array<Object>;
 	product2: Object;
 	product3: Object;
@@ -51,7 +53,9 @@ export class SearchComponent {
 		for(var i=0; i<this.products.length;i++)
 		{
 			this.product2=this.products[i];
-			if(this.product2.name==this.searchValue){
+			var regexp = new RegExp(this.searchValue, 'i');
+			var tempSearch = (this.product2.name).match(regexp);
+			if(this.product2.name==this.searchValue || tempSearch != null){
 				this.product3=this.product2;
 				this.search=1;
 				break;

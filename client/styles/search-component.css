@@ -1,15 +1,14 @@
 .relleno{
     padding-top: 20px;
-} 
+}
 #background{
   background-color: #f7f7f7;
   border-radius: 3px;
   text-align: center;
-  margin: 1em;
-  position: relative !important;
+  min-height:850px;
+  overflow: hidden;
   padding-bottom: 10px;
-  max-height: 800px;
-  height:600px;
+
 }
 #searchHolder{
     background-color: white;

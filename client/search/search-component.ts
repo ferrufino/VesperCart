@@ -25,7 +25,7 @@ export class SearchComponent {
 
 	products: Array<Object>;
 	product2: Object;
-	product3: Object;
+	product3: Array<Object>;
 	search: Object;
 
 	cartList: Array<Object>;
@@ -50,22 +50,30 @@ export class SearchComponent {
 
 	loadSearch(product){
 	//		alert(product);
+		this.search=0;
+		var arr = [];
 		for(var i=0; i<this.products.length;i++)
 		{
 			this.product2=this.products[i];
 			var regexp = new RegExp(this.searchValue, 'i');
 			var tempSearch = (this.product2.name).match(regexp);
 			if(this.product2.name==this.searchValue || tempSearch != null){
-				this.product3=this.product2;
+			  //alert(this.products[i].name);
+				arr.push(this.products[i]);
+				//alert(arr[0].name);
+				//this.product3.push(this.products[i]);
+			//	alert(this.product3[0].name);
 				this.search=1;
-				break;
+
 				//alert(this.product3.name);
 			}
-			this.search=0;
+
 		}
 
 		if(this.search == 0){
 			alert("bro no encontramos tu producto");
+		}else{
+			this.product3 = arr;
 		}
 	}
 

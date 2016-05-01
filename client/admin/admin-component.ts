@@ -57,7 +57,7 @@ export class AdminComponent {
   	this.selectedproduct = null;
   }
 
-	insertAttempt(product,category, description, quantity, store){
+	insertAttempt(product,category, description, quantity, store,price){
 	this.exists = 0;
 		for(var i=0;i<this.products.length;i++)
 		{
@@ -80,9 +80,10 @@ export class AdminComponent {
 			Products.insert({
 				"name":product,
 				"category":this.categoryID,
+				"price":price,
 				"description":description,
 				"quantity":quantity,
-				"storeName":store
+				"storeName":store,
 			})
 			alert("product successfully inserted!");
 		}

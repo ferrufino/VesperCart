@@ -3,7 +3,7 @@
 <div id="backgroundH" class="grid grid-pad">
     <div *ngFor="#product of products" class="col-1-4" >
     	<div class="module hero">
-      		<h4><i>{{product.name}}</i></h4>
+      		<i>{{product.name}}</i>
       		<p>$ {{product.price}} <br/> {{product.description}}</p>
       		<button md-raised-button class="md-raised details" [routerLink]="['/ProductDetails', {productId: product._id}]" >Details</button>
       		<button md-fab class="md-mini md-fab" aria-label="Eat cake"><i class="material-icons" (click)="onSelectProduct(product.name)">add</i></button>

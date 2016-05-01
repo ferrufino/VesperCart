@@ -69,7 +69,7 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
         'admin': 0
       })
       alert("user successfully created");
-      Session.set('sessionRegister', usernam);
+      Session.setPersistent('sessionRegister', usernam);
       var register = Session.get('sessionRegister');
       alert(register);
       this.match=0;
@@ -94,8 +94,8 @@ registerAttempt(usernam,first,last,address,card,security,mail,password,phone){
 
 				this._router.navigate( ['Checkout'] );
         alert("login");
-        Session.set('UserLoginSession', user);
-        Session.set('admin',this.user2.admin);
+        Session.setPersistent('UserLoginSession', user);
+        Session.setPersistent('admin',this.user2.admin);
         var usern = Session.get('UserLoginSession');
         alert (usern);
     }

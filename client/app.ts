@@ -43,14 +43,21 @@ class App {
   logged: Object;
 	constructor (zone: NgZone) {
     Tracker.autorun(() => zone.run(() => {
-		  this.categories = Categories.find().fetch();
-      if(Session.get('UserLoginSession') != " " || Session.get('sessionRegister')!= " " ){
+	this.categories = Categories.find().fetch();
+      /*var x =Session.get('UserLoginSession');
+      alert(x);
+      var y= Session.get('sessionRegister');
+      alert (y);*/
+
+      if((Session.get('UserLoginSession')!=" ") || (Session.get('sessionRegister')!=" ")){
         this.logged = 1;
+        //alert("logged?");
       }else{
         this.logged = 0;
+        //alert("not logged");
       }
 
-		  if(Session.get('admin')==1)
+		  if(Session.get('admin')!=" ")
 		  {
 		  	this.admin=1;
 		  }
@@ -62,11 +69,12 @@ class App {
 	}
 
   logOut(){
-    Session.set('UserLoginSession'," ");
-    Session.set('sessionRegister'," ");
-    Session.set('admin'," ");
+    Session.setPersistent('UserLoginSession'," ");
+    Session.setPersistent('sessionRegister'," ");
+    Session.setPersistent('admin'," ");
+    this.logged = 0;
+    this.admin = 0;
     alert("logout");
-
   }
 
 }

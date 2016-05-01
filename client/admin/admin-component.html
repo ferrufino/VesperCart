@@ -5,7 +5,7 @@
       <h4>Insert a Product</h4>
     </div>
     <div>
-  <form name="usrForm" #insertForm="ngForm" (ngSubmit)="insertAttempt(P.value,C.value,PD.value,PQ.value,PSN.value)">
+  <form name="usrForm" #insertForm="ngForm" (ngSubmit)="insertAttempt(P.value,C.value,PD.value,PQ.value,PSN.value,PPR.value)">
     <div layout-gt-sm="row">
       <md-input-container class="md-block" flex-gt-sm>
         <label>Product Name</label>
@@ -24,6 +24,10 @@
       <md-input-container class="md-block" flex-gt-sm>
         <label>Product Description</label>
         <input md-input ngControl="Productdescription" required #PD>
+      </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+        <label>Product's Price</label>
+        <input md-input ngControl="ProductPrice" required #PPR>
       </md-input-container>
     </div>
     <div layout-gt-sm="row">

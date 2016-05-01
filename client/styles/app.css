@@ -6,6 +6,7 @@ h2#logo a{
 }
 h2 a span{
       margin-left: 1em;
+      cursor: pointer;
 }
 
 ul{

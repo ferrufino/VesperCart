@@ -8,9 +8,9 @@
 						<div id="name">
 						{{product.name}}
 						</div>
-						<p>{{product.description}}{{product.id}}</p>
+						<p>${{product.price}} <br/> {{product.description}} </p>
 						<button md-raised-button class="md-raised details" [routerLink]="['/ProductDetails', {productId: product._id}]" >Details</button>
-						<button md-fab class="md-mini md-fab" aria-label="Eat cake" (click)="onSelectProduct(product.name)"><i class="material-icons">add</i></button>
+						<button md-fab class="md-mini md-fab" aria-label="Eat cake" (click)="onSelectProduct(product)"><i class="material-icons">add</i></button>
 					</div>
 				</div>
 				<div>

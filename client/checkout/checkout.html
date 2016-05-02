@@ -54,16 +54,16 @@
           <tr>
             <th class="md-text-cell">Product</th>
             <th>Quantity</th>
-            <th>Remove</th>
             <th>Price</th>
+            <th>Remove</th>
           </tr>
         </thead>
         <tbody>
         <tr *ngFor="#product of cartList | orderby:'name'" style="height: auto;height:10px;">
           <td class="md-text-cell">{{product.name}}</td>
           <td>{{product.quantity}}</td>
-          <td><button md-fab class="md-mini md-primary" (click)="removeParty(product._id)">x</button></td>
           <td>{{product.price}}</td>
+          <td><button md-fab class="md-mini md-primary" (click)="removeParty(product._id)">x</button></td>
         </tr>
         </tbody>
         </md-data-table>

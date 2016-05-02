@@ -33,7 +33,7 @@ export class HomeComponent {
 		}));
 	}
 
-	onSelectProduct(proName){
+	onSelectProduct(produc){
 
 		if(!(Session.get('sessionCart')))
 
@@ -45,7 +45,7 @@ export class HomeComponent {
 			for(var i=0; i<this.cartList.length;i++)
 			{
 				this.cl2 =this.cartList[i];
-				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
+				if(this.cl2.name == produc.name && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
 					break;
@@ -56,8 +56,9 @@ export class HomeComponent {
 			if(this.ans==0){
 				Carts.insert({
 					'ip': myip,
-					'name': proName,
-					'quantity': 1
+					'name': produc.name,
+					'quantity': 1,
+					'price': produc.price
 				})
 
 				//alert("New product added");
@@ -74,7 +75,8 @@ export class HomeComponent {
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
-					'quantity': cant
+					'quantity': cant,
+					'price': this.aux.price
 				});
 				//alert("Should update product quantity");
 					this.openNav.openS();
@@ -88,7 +90,7 @@ export class HomeComponent {
 			for(var i=0; i<this.cartList.length;i++)
 			{
 				this.cl2 =this.cartList[i];
-				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
+				if(this.cl2.name == produc.name && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
 					break;
@@ -110,7 +112,8 @@ export class HomeComponent {
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
-					'quantity': cant
+					'quantity': cant,
+					'price': this.aux.price
 				});
 				this.openNav.openS();
 			}
@@ -120,8 +123,9 @@ export class HomeComponent {
 			//alert("new product");
 				Carts.insert({
 					'ip': myip,
-					'name': proName,
-					'quantity': 1
+					'name': produc.name,
+					'quantity': 1,
+					'price': produc.price
 				})
 			}
 		}else{

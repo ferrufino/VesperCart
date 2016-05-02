@@ -31,7 +31,7 @@ export class ProductDetails {
     }));
   }
 
-  onSelectProduct(proName){
+  onSelectProduct(produc){
 
 		if(!(Session.get('sessionCart')))
 
@@ -54,8 +54,9 @@ export class ProductDetails {
 			if(this.ans==0){
 				Carts.insert({
 					'ip': myip,
-					'name': proName,
-					'quantity': 1
+					'name': produc.name,
+					'quantity': 1,
+          'price': produc.price
 				})
 
 				//alert("New product added");
@@ -108,7 +109,8 @@ export class ProductDetails {
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
-					'quantity': cant
+					'quantity': cant,
+          'price':this.aux.price
 				});
 				this.openNav.openS();
 			}
@@ -118,8 +120,9 @@ export class ProductDetails {
 			//alert("new product");
 				Carts.insert({
 					'ip': myip,
-					'name': proName,
-					'quantity': 1
+					'name': produc.name,
+					'quantity': 1,
+          'price': produc.price
 				})
 			}
 		}else{

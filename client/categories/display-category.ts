@@ -46,7 +46,7 @@ export class DisplayCategory implements OnInit{
 	getProducts(){
 		this._productService.getProducts().then(products => this.products = products);
 	}
-	onSelectProduct(proName){
+	onSelectProduct(produc){
 
 		if(!(Session.get('sessionCart')))
 		{
@@ -58,7 +58,7 @@ export class DisplayCategory implements OnInit{
 			for(var i=0; i<this.cartList.length;i++)
 			{
 				this.cl2 =this.cartList[i];
-				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
+				if(this.cl2.name == produc.name && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
 					break;
@@ -69,8 +69,9 @@ export class DisplayCategory implements OnInit{
 			if(this.ans==0){
 				Carts.insert({
 					'ip': myip,
-					'name': proName,
-					'quantity': 1
+					'name': produc.name,
+					'quantity': 1,
+					'price': produc.price
 				})
 
 				//alert("New product added");
@@ -85,7 +86,8 @@ export class DisplayCategory implements OnInit{
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
-					'quantity': cant
+					'quantity': cant,
+					'price': this.aux.price
 				});
 			}
 
@@ -97,7 +99,7 @@ export class DisplayCategory implements OnInit{
 			for (var x=0; x<this.cartList.length;x++){
 				this.cl2 =this.cartList[x];
 				//alert(this.cl2.name);
-				if(this.cl2.name == proName && (this.cl2.ip == Session.get('sessionCart'))){
+				if(this.cl2.name == produc.name && (this.cl2.ip == Session.get('sessionCart'))){
 					this.cl3 = this.cl2;
 					this.ans=1;
 					break;
@@ -118,7 +120,8 @@ export class DisplayCategory implements OnInit{
 				Carts.insert({
 					'ip':this.aux.ip,
 					'name': this.aux.name,
-					'quantity': cant
+					'quantity': cant,
+					'price': this.aux.price
 				});
 				/*Carts.update({'name': proName, 'ip': myip }, { $set : {'quantity': cant }});*/
 			}
@@ -128,8 +131,9 @@ export class DisplayCategory implements OnInit{
 			//alert("new product");
 				Carts.insert({
 					'ip': myip,
-					'name': proName,
-					'quantity': 1
+					'name': produc.name,
+					'quantity': 1,
+					'price': produc.price
 				})
 			}
 

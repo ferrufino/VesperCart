@@ -15,8 +15,9 @@
         <md-data-table layout-fill>
           <thead>
           <tr>
-            <th class="md-text-cell">Material</th>
+            <th class="md-text-cell">Product</th>
             <th>Quantity</th>
+            <th>Price</th>
             <th>Remove</th>
           </tr>
         </thead>
@@ -24,6 +25,7 @@
         <tr *ngFor="#product of cartList | orderby:'name'" style="height: auto;height:10px;">
           <td class="md-text-cell">{{product.name}}</td>
           <td>{{product.quantity}}</td>
+          <td>{{product.price}}</td>
           <td><button md-fab class="md-mini md-primary" (click)="removeParty(product._id)">x</button></td>
         </tr>
         </tbody>

@@ -1,6 +1,6 @@
 # VesperCart
 
-## Commands needed to run and files missing, for the app to run
+## Commands needed to run and files missing needed, for the app to work
 
 meteor add angular2-compilers
 meteor npm install --save angular2-meteor

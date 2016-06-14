@@ -1,6 +1,6 @@
 # VesperCart
 
-### Commands needed to run and files missing needed, for the app to work
+### Commands needed to run and files missing, for the app to work
 
 meteor add angular2-compilers
 
